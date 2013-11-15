@@ -36,6 +36,7 @@
           %h2.sg-h2= section.titleize
           - if File.exists?("source/partials/_#{section}.haml")
             = partial "partials/#{section}"
+            .sg-callout= "source/partials/_#{section}.haml"
           - else
             = partial "partials/initializers/#{section}"
 

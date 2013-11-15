@@ -106,8 +106,15 @@ body, html
 
 .sg-section
   margin-bottom: 30px
-  padding-bottom: 30px
-  border-bottom: 1px solid $sg-medium-gray
+  padding: 20px
+  border: 1px solid $sg-medium-gray
+  border-radius: 5px
+  .sg-h2
+    margin-top: 0
+
+.sg-section-welcome
+  border: 0
+  padding: 0
 
 .sg-a
   color: $sg-primary
@@ -192,14 +199,8 @@ $sg-color-counter: 0
 .sg-section-combos
   .combo-left, .combo-right
     padding: 20px
-  .prettyprint
-    margin-top: 0 !important
   .grid__item
     margin-bottom: 20px
-
-.sg-section-alerts
-  .prettyprint
-    margin-top: 0 !important
 
 .sg-icon
   margin-bottom: 20px
@@ -239,11 +240,10 @@ $sg-color-counter: 0
     &:last-child
       padding-left: 20px
 
-/* apply basic formatting to prettyprint */
-body pre.prettyprint, body code.prettyprint,
+.sg-callout
   padding: 20px
-  border: 1px solid $sg-medium-gray 
-  font-size: 14px
-  display: block
   background: $sg-light-gray
-  margin: 10px 0
+  margin: 20px 0
+  border-radius: 5px
+  &:last-child
+    margin-bottom: 0

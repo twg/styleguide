@@ -41,9 +41,18 @@
 .icon-arrow-right:before {
 	content: "\e605";
 }
+.icon-reorder:before {
+	content: "\e608";
+}
 .icon-angle-up:before {
 	content: "\e606";
 }
 .icon-angle-down:before {
 	content: "\e607";
+}
+.icon-caret-down:before {
+	content: "\e609";
+}
+.icon-caret-up:before {
+	content: "\e60a";
 }

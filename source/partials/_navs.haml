@@ -1,10 +1,48 @@
-%nav.primary
-  %ul
+%h3.sg-h3 %nav.primary 
+
+%nav.primary{data:{toggle:'#primary-nav-left, #primary-nav-right'}}
+  %ul#primary-nav-left
     %li
       %a{href:'#'} News
     %li
       %a{href:'#'} Competitions
     %li
-      %a{href:'#'} About
+      %a{href:'#', data:{toggle:'#about-dropdown'}} About
+      %nav.dropdown#about-dropdown
+        %ul
+          %li
+            %a{href:'#'} 2013/14 Registration Fees
+          %li
+            %a{href:'#'} 2013/14 Schedule
+          %li
+            %a{href:'#'} Board of Directors 
+          %li
+            %a{href:'#'} Coaches Clinic
+          %li
+            %a{href:'#'} Code of Conduct
+          %li
+            %a{href:'#'} Contact Us
+          %li
+            %a{href:'#'} FAQ's
+          %li
+            %a{href:'#'} NJB History
+          %li
+            %a{href:'#'} Registration Instructions
+          %li
+            %a{href:'#'} Sponsors
     %li
       %a{href:'#'} Register
+  %ul#primary-nav-right
+    %li
+      %a{href:'#'} Login
+
+%a.button{href:'#', data:{toggle:'#foo'}} Trigger
+%nav.dropdown#foo
+  %ul
+    %li 
+      %a{href:'#'} One
+    %li 
+      %a{href:'#'} One
+    %li 
+      %a{href:'#'} One
+
