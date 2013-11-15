@@ -105,16 +105,14 @@ body, html
     margin-top: 50px
 
 .sg-section
-  margin-bottom: 30px
-  padding: 20px
-  border: 1px solid $sg-medium-gray
-  border-radius: 5px
+  margin-bottom: 60px
+  padding-bottom: 60px
+  border-bottom: 1px solid $sg-medium-gray
+  @include breakpoint(palm)
+    margin-bottom: 25px
+    padding-bottom: 25px
   .sg-h2
     margin-top: 0
-
-.sg-section-welcome
-  border: 0
-  padding: 0
 
 .sg-a
   color: $sg-primary
@@ -204,7 +202,6 @@ $sg-color-counter: 0
 
 .sg-icon
   margin-bottom: 20px
-  text-align: center
   i
     font-size: em(36px)
 
