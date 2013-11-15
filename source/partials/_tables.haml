@@ -1,0 +1,19 @@
+%p.sg-p Basic tables can be created by simply applying the ".basic" class to any table element. This project uses the <a href="http://fooplugins.com/footable-demos/" class="sg-a" target="_blank">FooTable</a> to handle responsive tables. FooTable allows specific columns to be hidden at specific breakpoints by applying the "data-hide" attribute to the "th" element. Columns can be hidden at the either the "palm" and/or the "portable" breakpoints.
+
+%table.basic
+  %thead
+    %tr
+      %th{data:{class:'expand'}} Gender
+      %th Age Group 
+      %th Level
+      %th{data:{hide:'palm,portable'}} Type
+      %th{data:{hide:'palm'}} Division
+  %tbody
+    - for i in (1..5) do
+      %tr
+        %td Girls 
+        %td Grades 3, 4 
+        %td D3
+        %td Round Robin
+        %td 
+          %a.secondary.button{href:'#'} Register to GD3

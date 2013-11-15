@@ -1,0 +1,21 @@
+%p.sg-p This project uses the <a class="sg-a" href="https://github.com/csswizardry/csswizardry-grids">CSS Wizardry Grid</a>. Each row of the grid should be wrapped in a ".grid" element. Each ".grid" will contain a number of ".grid__item" elements that divide-up the available space. ".grid_item" elements should be used in conjunction with the spacing classes. The spacing classes are verbose and written in plain English (ex. "one-half, two-thirds, three-quarters, one-whole, etc.). Different spacing elements can be applied at different breakpoints (ex. palm--one-half, lap--two-thirds, desk--three-quarters).
+
+%h3.sg-h3 Breakpoints
+%p.sg-p The naming convention for the breakpoints are inspired by <a class="sg-a" href="https://twitter.com/lukew/status/273453112902172672">this tweet</a> by Luke Wroblewski. They include "palm" (480px and down), "lap" (481px to 1023px), "portable" (1023px and down), and "desk" (1024px and up).
+
+.grid
+  .grid__item.one-half 
+    %code.prettyprint .grid__item.one-half
+  .grid__item.one-half 
+    %code.prettyprint .grid__item.one-half
+
+.grid
+  .grid__item.one-third 
+    %code.prettyprint .grid__item.one-third
+  .grid__item.one-third 
+    %code.prettyprint .grid__item.one-third
+  .grid__item.one-third 
+    %code.prettyprint .grid__item.one-third
+
+%p.sg-p
+  %small.sg-small note - unfortunately this grid system does not follow the naming convention employed throughout the rest of this project.

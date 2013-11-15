@@ -1,0 +1,39 @@
+// helper function for combining multiple color definitions into a single list
+@function new($value)
+  @return join($colors, $value)
+
+// color table
+$colors: ()
+$colors: new(primary-light #FBBE5A #50535A)
+$colors: new(primary #F87D30 white)
+$colors: new(primary-dark #ff6122 white)
+$colors: new(secondary-lightest #F1F6FC #666666)
+$colors: new(secondary-lighter #D4DEEC #5E75A4)
+$colors: new(secondary-light #356499 white)
+$colors: new(secondary #144984 white)
+$colors: new(secondary-dark #0E3C6E white)
+$colors: new(text #717171 #333333)
+$colors: new(text-dark #333333 white)
+$colors: new(success #DFF0D8 #468847)
+$colors: new(error #F2DEDE #b94a48)
+$colors: new(info #D9EDF7 #3a87ad)
+
+// helper function to access colors 
+@function color($color)
+  $i: index($colors, $color)
+  @return nth($colors, $i + 1)
+
+// helper function to access text-colors 
+@function text($color)
+  $i: index($colors, $color)
+  @return nth($colors, $i + 2)
+
+// loop through colors to create #{color}-color and #{color}-background definitions
+@for $i from 1 through length($colors)
+  @if ($i - 1) % 3 == 0
+    $color: nth($colors, $i)
+    .#{$color}-color
+      color: color($color)
+    .#{$color}-background
+      background-color: color($color)
+      color: text($color)

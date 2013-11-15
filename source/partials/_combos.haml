@@ -1,0 +1,25 @@
+%p.sg-p Combo units are used to group a pair of side-by-side elements. With ".combo.left" the left element occupies exactly as much space as it requires and the right elements occupies the remaining horizontal space. ".combo.right" is the inverse of ".combo-left". The combo object is inspired by and based on the <a class="sg-a" target="_blank" href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">OOCSS Media Object</a>.
+
+.grid
+  .grid__item.one-half.palm--one-whole
+    .combo.left
+      .combo-left.primary-light-background Left 
+      .combo-right.secondary-light-background Right
+  .grid__item.one-half.palm--one-whole
+    %pre.prettyprint
+      :plain
+        .combo.left
+          .combo-left
+          .combo-right
+
+.grid
+  .grid__item.one-half.palm--one-whole
+    .combo.right
+      .combo-left.primary-light-background Left
+      .combo-right.secondary-light-background Right
+  .grid__item.one-half.palm--one-whole
+    %pre.prettyprint
+      :plain
+        .combo.right
+          .combo-left
+          .combo-right

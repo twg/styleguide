@@ -1,0 +1,17 @@
+// breakpoint helper
+@mixin breakpoint($bp, $show:false)
+  @if $show and $old-ie
+    @content
+  @else 
+    @if $bp == palm
+      @media (max-width: $palm)
+        @content
+    @else if $bp == lap
+      @media (min-width: ($palm + 1)) and (max-width: ($desk - 1))
+        @content
+    @else if $bp == portable
+      @media (max-width: ($desk - 1))
+        @content
+    @else if $bp == desk
+      @media (min-width: $desk) 
+        @content

@@ -1,0 +1,45 @@
+%p.sg-p There are five heading styles used throughout the site. Each heading can have additional optional classes applied to it to further alter its appearance. These optional classes include "raised", "uppercase", "lowercase", and "inverted".
+
+.sg-heading
+  %h1 Heading One
+  %p.sg-p 42px PT Sans bold
+
+.sg-heading
+  %h2 Heading Two
+  %p.sg-p 33px PT Sans bold
+
+.sg-heading
+  %h3 Heading Three
+  %p.sg-p 26px PT Sans regular
+
+.sg-heading
+  %h4 Heading Four
+  %p.sg-p 18px PT Sans regular
+
+.sg-heading
+  %h5 Heading Five
+  %p.sg-p 16px PT Sans bold
+
+%table.sg-table
+  %thead
+    %tr
+      %th Modifiers
+      %th Descriptions
+  %tbody
+    %tr
+      %td
+        %h4.uppercase .uppercase
+      %td Apply uppercase text formatting.
+    %tr
+      %td
+        %h4.lowercase .lowercase
+      %td Apply lowercase text formatting.
+    %tr
+      %td
+        %h4.raised .raised
+      %td Apply raised formatting with a subtle drop-shadow.
+    %tr
+      %td
+        .secondary-background
+          %h4.inverted .inverted
+      %td Apply the inverted style for use on dark backgrounds.

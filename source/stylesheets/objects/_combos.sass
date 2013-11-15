@@ -1,0 +1,29 @@
+/* ========================================================= */
+/* Combo */
+/* ========================================================= */
+
+.combo
+  &.left
+    .combo-left
+      float: left
+    .combo-right
+      float: none
+      overflow: hidden 
+      _overflow: visible 
+      zoom: 1
+
+  &.right
+    display: table
+    width: 100%
+    border-spacing: 0
+    border-collapse: collapse
+    .combo-left
+      float: none
+      display: table-cell
+      vertical-align: top
+    .combo-right
+      float: none
+      display: table-cell
+      width: 1px
+      white-space: nowrap
+      vertical-align: top

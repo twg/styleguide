@@ -1,0 +1,50 @@
+.tabs-nav
+  list-style-type: none
+  margin: 0
+  margin-bottom: -1px
+  padding: 0
+  > li
+    display: inline-block
+    padding: 15px 20px
+    border-radius: 5px 5px 0 0 
+    border: 1px solid color(secondary-lighter)
+    &.active
+      border-bottom-color: white
+      background: white
+    &:not(.active)
+      background: color(secondary-lighter)
+      cursor: pointer
+      &:hover
+        background: lighten(color(secondary-lighter), 3)
+
+.tabs-content
+  list-style-type: none
+  margin: 0
+  padding: 0
+  > li:not(.active)
+    display: none
+  .active
+    .card
+      border-top-left-radius: 0
+
+@mixin tabs-stacked
+  .tabs-nav
+    display: none
+  .tabs-content
+    li
+      display: block
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+
+@include breakpoint(palm)
+  .palm--tabs-stacked
+    @include tabs-stacked  
+
+@include breakpoint(lap)
+  .lap--tabs-stacked
+    @include tabs-stacked
+
+@include breakpoint(portable)
+  .portable--tabs-stacked
+    @include tabs-stacked

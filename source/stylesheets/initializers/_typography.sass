@@ -1,0 +1,68 @@
+/* ========================================================= */
+/* Define Base Typeface */
+/* ========================================================= */
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700)
+body, html
+  font-family: 'PT Sans', sans-serif
+  font-size: 100%
+
+/* ========================================================= */
+/* Headings */
+/* ========================================================= */
+
+h1, h2, h3, h4, h5, h6
+  &.uppercase
+    text-transform: uppercase
+  &.lowercase
+    text-transform: lowercase
+  &.raised
+    text-shadow: 0 1px 2px rgba(black, 0.7)
+  &.inverted
+    color: white
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+h1
+  font-size: em(42px)
+  font-weight: bold
+
+h2
+  font-size: em(33px)
+  font-weight: bold
+
+h3
+  font-size: em(26px)
+  font-weight: normal
+
+h4
+  font-size: em(18px)
+  font-weight: normal
+
+h5
+  font-size: em(16px)
+  font-weight: bold
+
+/* ========================================================= */
+/* Paragraphs */
+/* ========================================================= */
+
+a
+  color: color(secondary)
+  text-decoration: none
+  &:hover:not(.disabled)
+    color: text(secondary-light)
+    text-decoration: underline
+
+/* ========================================================= */
+/* Paragraphs */
+/* ========================================================= */
+
+p
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
