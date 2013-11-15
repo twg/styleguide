@@ -1,0 +1,13 @@
+:ruby
+  # scan the icomoon stylesheet for all the icon names and store them in an array
+  icons = File.read('app/assets/stylesheets/initializers/icomoon/style.css').scan(/icon\-[^:]*/)
+  icons.shift
+
+%p.sg-p Icons are generated using the <a class="sg-a" href="http://icomoon.io/app" target="_blank">IcoMoon web app</a>. All icons are part of the Font Awesome icon set.
+
+.grid.sg-icons
+  - icons.each do |icon|
+    .grid__item.one-third.palm--one-whole.lap--one-half
+      .sg-icon
+        %i{class:"#{icon}"}
+        = icon
