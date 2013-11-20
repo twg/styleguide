@@ -1,0 +1,18 @@
+%p.sg-p This project employs the <a class="sg-a" target="_blank" href="">single-direction margining</a> technique throughout. Elements by default have a bottom margin of 20px and a top margin of 0. Last-child elements have a bottom margin of 0. If margining needs to be set on a new element or a default margin value needs to be overridden a number of spacing modifiers are available.
+
+%table.sg-table
+  %thead
+    %tr
+      %th Modifiers
+      %th Descriptions
+  %tbody
+    - {'flush' => 0, 'normal' => 20, 'large' => 50}.each do |key, value|
+      %tr
+        %td 
+          %span.sg-code .#{key}-bottom
+        %td #{value}px bottom margin.
+      - for bp in ['palm', 'lap', 'portable', 'desk']
+        %tr
+          %td 
+            %span.sg-code .#{bp}--#{key}-bottom
+          %td #{value}px bottom margin at the #{bp} breakpoint.

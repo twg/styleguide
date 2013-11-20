@@ -1,0 +1,69 @@
+/* ========================================================= */
+/* Spacing */
+/* ========================================================= */
+
+$normal-bottom: 20px
+$large-bottom: 50px
+
+// default margining
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dd,
+p, figure,
+pre, table, fieldset, hr
+  margin-top: 0
+  margin-bottom: $normal-bottom 
+  &:last-child
+    margin-bottom: 0
+
+/* ========================================================= */
+/* Flush Bottom */
+/* ========================================================= */
+
+.flush-bottom
+  margin-bottom: 0
+
+@each $bp in $bps
+  @include breakpoint($bp)
+    .#{$bp}--flush-bottom
+      margin-bottom: 0 
+
+// ensure flush bottom works correctly within sections
+section
+  .flush-bottom
+    margin-bottom: $normal-bottom * -1
+  &.large
+    .flush-bottom
+      margin-bottom: $large-bottom * -1
+
+@each $bp in $bps
+  @include breakpoint($bp)
+    section
+      .#{$bp}--flush-bottom
+        margin-bottom: $normal-bottom * -1
+      &.large
+        .#{$bp}--flush-bottom
+          margin-bottom: $large-bottom * -1
+
+/* ========================================================= */
+/* Normal Bottom */
+/* ========================================================= */
+
+.normal-bottom
+  margin-bottom: $normal-bottom
+
+@each $bp in $bps
+  @include breakpoint($bp)
+    .#{$bp}--normal-bottom
+      margin-bottom: $normal-bottom
+
+/* ========================================================= */
+/* Large Bottom */
+/* ========================================================= */
+
+.large-bottom
+  margin-bottom: $large-bottom
+
+@each $bp in $bps
+  @include breakpoint($bp)
+    .#{$bp}--large-bottom
+      margin-bottom: $large-bottom

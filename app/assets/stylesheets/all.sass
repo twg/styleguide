@@ -1,15 +1,19 @@
 /* Files that must be loaded first (and/or in a specific order)
 @import "initializers/bourbon/bourbon"
-@import "initializers/variables"
 @import "initializers/icomoon/style"
 @import "initializers/mixins/*"
+@import "initializers/grid/variables"
+@import "initializers/grid/csswizardry-grids"
 @import "initializers/plugins/*"
 @import "initializers/colors"
 @import "initializers/typography"
-@import "initializers/grid/csswizardry-grids"
+@import "initializers/images"
+@import "initializers/modifiers"
+@import "initializers/spacing"
 
 /* Self contained component files */
 @import "objects/*"
+@import "objects/singletons/*"
 
 /* Page specific overrides */
-@import "pages/_styleguide"
+@import "pages/*"

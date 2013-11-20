@@ -105,6 +105,7 @@ body, html
     margin-top: 50px
 
 .sg-section
+  padding: 0
   margin-bottom: 60px
   padding-bottom: 60px
   border-bottom: 1px solid $sg-medium-gray
@@ -117,7 +118,7 @@ body, html
 .sg-a
   color: $sg-primary
   &:hover
-    color: $sg-secondary
+    color: $sg-secondary !important
 
 /* format styleguide headings */
 .sg-h1, .sg-h2, .sg-h3, .sg-h4, .sg-h5, .sg-h6
@@ -134,6 +135,8 @@ body, html
 .sg-h2
   font-size: 1.5em
   color: $sg-primary
+  margin: 0
+  display: inline-block
 
 .sg-h3
   font-size: 1.25em
@@ -181,33 +184,16 @@ $sg-color-counter: 0
           width: 100%
           text-align: center
 
-
-.sg-section-buttons
-  .secondary-background
-    padding: 20px
-    display: inline-block
-  code
-    margin: 0 !important
-  .grid
-    margin-bottom: 20px
-  @include breakpoint('palm')
-    code
-      margin: 20px 0 !important
-
 .sg-section-combos
-  .combo-left, .combo-right
-    padding: 20px
   .grid__item
     margin-bottom: 20px
 
 .sg-icon
   margin-bottom: 20px
   i
+    vertical-align: middle
+    margin-right: 5px
     font-size: em(36px)
-
-.sg-section-breadcrumbs
-  .secondary-dark-background
-    padding: 20px
 
 .sg-section-typefaces
   .sg-typefaces
@@ -216,11 +202,6 @@ $sg-color-counter: 0
       margin-bottom: 15px
     .sg-bold
       font-weight: bold
-
-.sg-section-headings
-  .secondary-background
-    padding: 20px
-    display: inline-block
 
 .sg-heading
   margin-bottom: 20px
@@ -244,3 +225,27 @@ $sg-color-counter: 0
   border-radius: 5px
   &:last-child
     margin-bottom: 0
+
+.sg-code
+  @extend .sg-callout
+  margin: 0
+  padding: 4px 3px
+  display: inline-block
+  font-family: monospace
+  line-height: normal
+  color: black
+
+.sg-path
+  @extend .sg-code
+  float: right
+  margin-top: -26px
+  display: inline-block
+  color: $sg-primary
+  font-size: 10px
+  background: lighten($sg-light-gray, 5)
+  @include breakpoint(portable)
+    display: none
+
+.sg-section-head
+  overflow: hidden
+  margin-bottom: 20px

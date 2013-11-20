@@ -27,12 +27,12 @@ nav.primary
           padding: 30px 35px 
           display: block
           text-transform: uppercase
-          color: color(text)
+          color: color(tertiary)
           text-shadow: 0 1px 0 white
           @include transform(skew(20deg))
           &:hover
             text-decoration: none
-            color: text(text)
+            color: text(tertiary)
           &[data-toggle]
             &:after
               margin-left: 10px
@@ -53,9 +53,9 @@ nav.primary
       display: inline-block
       padding: 10px
       padding-bottom: 5px
-      background: color(text)
-      color: color(text)
-      border: 1px solid lighten(color(text), 30)
+      background: color(tertiary)
+      color: color(tertiary)
+      border: 1px solid lighten(color(tertiary), 30)
       border-radius: 5px
       font-size: em(28px)
       @include background-image(linear-gradient(white, #D9D8D7))
@@ -75,12 +75,12 @@ nav.primary
     a
       display: block
       padding: 10px 5px
-      color: color(text)
+      color: color(tertiary)
       border-radius: 5px
       @include transition(all 0.1s linear)
       &:hover
         text-decoration: none
-        background: color(text)
+        background: color(tertiary)
       &[data-toggle]
         &:after
           margin-left: 10px
@@ -97,5 +97,5 @@ nav.primary
         padding: 10px 5px
         box-shadow: none !important
         &:hover
-          background: color(text)
+          background: color(tertiary)
           color: white

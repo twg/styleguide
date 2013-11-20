@@ -1,24 +1,38 @@
 var sgClicked = false;
 
 $(document).ready(function(){
-  sgNavCheck();
+  sgHashCheck();
   $(document).scroll(function(){
     if(!sgClicked){
       sgNavCheck();
     }
   });
   $('.sg-nav a').click(function(){
-    sgClicked = true;
     // remove current active nav item
     $('.sg-is-active').removeClass('sg-is-active');
     // apply the new active nav item
     $(this).parent().addClass('sg-is-active');
+    sgResetClicked();
+  });
+});
 
+function sgHashCheck(){
+  var sgHash = window.location.hash;
+  if(sgHash){
+    $('.sg-nav').find('a[href='+sgHash+']').parent().addClass('sg-is-active'); 
+    sgResetClicked();
+  }
+  else{
+    sgNavCheck();
+  }
+}
+
+function sgResetClicked(){
+    sgClicked = true;
     window.setTimeout(function(){
       sgClicked = false;
     }, 1000);
-  });
-});
+}
 
 function sgNavCheck(){
   // check all .sg-sections
@@ -30,7 +44,7 @@ function sgNavCheck(){
     }
   });
 
-  // if array isn't empty
+  // if item isn't empty
   if(sgSection != ''){
     // remove current active nav item
     $('.sg-is-active').removeClass('sg-is-active');

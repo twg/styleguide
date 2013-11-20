@@ -1,0 +1,32 @@
+$sgSectionNormal: 20px
+$sgSectionLarge: 50px
+
+section
+  padding: $sgSectionNormal 0
+  &.large
+    padding: $sgSectionLarge 0
+  @include breakpoint(palm)
+    &.palm--normal
+      padding: $sgSectionNormal 0
+    &.palm--large
+      padding: $sgSectionLarge 0
+  @include breakpoint(lap)
+    &.lap--normal
+      padding: $sgSectionNormal 0
+    &.lap--large
+      padding: $sgSectionLarge 0
+  @include breakpoint(portable)
+    &.portable--normal
+      padding: $sgSectionNormal 0
+    &.portable--large
+      padding: $sgSectionLarge 0
+  @include breakpoint(desk)
+    &.desk--normal
+      padding: $sgSectionNormal 0
+    &.desk--large
+      padding: $sgSectionLarge 0
+
+  &.image-background
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover 

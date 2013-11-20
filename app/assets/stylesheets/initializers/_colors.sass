@@ -12,8 +12,9 @@ $colors: new(secondary-lighter #D4DEEC #5E75A4)
 $colors: new(secondary-light #356499 white)
 $colors: new(secondary #144984 white)
 $colors: new(secondary-dark #0E3C6E white)
-$colors: new(text #717171 #333333)
-$colors: new(text-dark #333333 white)
+$colors: new(tertiary-light #EDF1F2 #333333)
+$colors: new(tertiary #717171 #333333)
+$colors: new(tertiary-dark #333333 white)
 $colors: new(success #DFF0D8 #468847)
 $colors: new(error #F2DEDE #b94a48)
 $colors: new(info #D9EDF7 #3a87ad)
@@ -33,7 +34,7 @@ $colors: new(info #D9EDF7 #3a87ad)
   @if ($i - 1) % 3 == 0
     $color: nth($colors, $i)
     .#{$color}-color
-      color: color($color)
+      color: color($color) !important
     .#{$color}-background
-      background-color: color($color)
+      background-color: color($color) !important
       color: text($color)

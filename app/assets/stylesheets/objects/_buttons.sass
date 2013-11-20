@@ -7,6 +7,9 @@
   border-width: 2px
   border-radius: 5px
   padding: 10px 25px
+  cursor: pointer
+  white-space: normal
+  @include user-select(none)
   @include breakpoint(palm)
     padding: 10px
   text-align: center
@@ -55,7 +58,7 @@
 
   &.large
     font-size: em(23px)
-    padding: 20px 45px
+    padding: 16px 45px
 
   &.disabled
     opacity: 0.5

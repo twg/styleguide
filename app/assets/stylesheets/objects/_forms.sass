@@ -1,0 +1,29 @@
+input[type="text"], input[type="email"], input[type="password"]
+  border: 1px solid color(secondary)
+  padding: 14px
+  margin-top: 0
+  margin-bottom: 7px
+  font-size: em(18px)
+  border-radius: 5px
+  width: 100%
+  display: block
+  box-sizing: border-box
+  @include transition(all 0.1s linear)
+  &:focus
+    padding-left: 28px
+    outline: 0
+    border-color: color(primary)
+
+input[type="submit"]
+  width: 100%
+  display: block
+  box-sizing: border-box
+
+.focus-indicator
+  @extend .icon-caret-right
+  @extend [class^="icon-"]
+  color: color(primary)
+  font-size: em(32px)
+  margin-top: -47px
+  margin-left: 10px
+  float: left

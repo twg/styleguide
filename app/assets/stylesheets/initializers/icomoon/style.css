@@ -56,3 +56,9 @@
 .icon-caret-up:before {
 	content: "\e60a";
 }
+.icon-caret-left:before {
+	content: "\e60b";
+}
+.icon-caret-right:before {
+	content: "\e60c";
+}

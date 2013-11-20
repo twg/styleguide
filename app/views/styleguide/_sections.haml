@@ -1,0 +1,18 @@
+%p.sg-p Sections should be used to divide up the major portions of the page. Sections modifiers can be applied to increase or decrease top and bottom padding. Without applying modifiers, sections default to 20px of vertical padding at all breakpoints.
+
+%table.sg-table
+  %thead
+    %tr
+      %th Modifiers
+      %th Descriptions
+  %tbody
+    - {'normal' => 20, 'large' => 50}.each do |key, value|
+      %tr
+        %td 
+          %span.sg-code .#{key}
+        %td #{value}px padding.
+      - for bp in ['palm', 'lap', 'portable', 'desk']
+        %tr
+          %td 
+            %span.sg-code .#{bp}--#{key}
+          %td #{value}px padding at the #{bp} breakpoint.

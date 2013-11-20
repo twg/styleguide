@@ -1,1 +1,11 @@
-%p.sg-p RSportz currently uses Formatted Form to generate its form based on Bootstrap markup. Since it is unlikely formatted form will be retrofitted to work with the new CSS framework, though less than ideal, we may have to stick with Bootstrap markup for forms.
+%p.sg-p RSportz currently uses Formatted Form to generate its form based on Bootstrap markup. 
+
+%form
+  .grid
+    .grid__item.one-half.palm--one-whole
+      %input{type:'text', placeholder:'Email'}
+    .grid__item.one-half.palm--one-whole
+      %input{type:'password', placeholder:'Password'}
+  .grid
+    .grid__item.one-third.palm--one-whole
+      %input.large.solid.button.primary{type:'submit'}

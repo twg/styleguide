@@ -8,7 +8,7 @@
 %p.sg-p The initializers folder should contain any files that must be loaded in before other styling files. This might include things like variable definitions, color schemes, mixins, and grid systems. 
 
 %h4.sg-h4 Objects
-%p.sg-p This is where the bulk of the styling code should live. All components of the site should be broken down into self contained objects. An object should always consume as much width as is made available to it (this should only be defined by the grid system). Each object file should contain all of the various states the object can have including any adjustments that need to be made at specific breakpoints. The order the objects are loaded in should be irrelevant, as one object should not talk to another object.
+%p.sg-p This is where the bulk of the styling code should live. All components of the site should be broken down into self contained objects. An object should always consume as much width as is made available to it (this should only be defined by the grid system). Each object file should contain all of the various states the object can have including any adjustments that need to be made at specific breakpoints. The order the objects are loaded in should be irrelevant, as one object should not talk to another object. Within the objects directory lives a sub-directory named singletons. Singletons are objects that are only ever intented to appear once on the page like the site's header and footer for example.
 
 %h4.sg-h4 Pages
 %p.sg-p The pages folder should contain any page specific overrides that might be necessary. Ideally, this folder contains a minimal amount of code as objects should not require frequent page specific overrides (if they do, you should consider incorporating these changes into the object itself).

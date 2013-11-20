@@ -33,11 +33,11 @@
       - for section in sections 
         %section.sg-section{class:"sg-section-#{section}"}
           %a.sg-anchor{id:"#{section}", name:"#{section}"}
-          %h2.sg-h2= section.titleize
+          .sg-section-head
+            %h2.sg-h2= section.titleize
+            .sg-path= "...app/views/styleguide/_#{section}.haml"
           - if File.exists?("app/views/styleguide/_#{section}.haml")
             = render partial: "styleguide/#{section}"
-            .sg-callout 
-              = "...app/views/styleguide/_#{section}.haml"
 
           - else
             = render partial: "styleguide/initializers/#{section}"
