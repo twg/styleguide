@@ -23,4 +23,12 @@ $(document).ready(function(){
     $(tar).children('.active').removeClass('active');
     $(tar).children('li:eq('+ind+')').addClass('active');
   });
+
+  // insert tab-responsive-headings
+  $('.tabs-nav li').each(function(){
+    var tabTitle = $(this).text();
+    var tabContent = $(this).parent().next();
+    var tabIndex = $(this).parent().children('li').index(this);
+    $(tabContent).find('li:nth-child('+(tabIndex+1)+')').prepend('<span class="tab-responsive-heading">'+tabTitle+'</span>');
+  });
 });

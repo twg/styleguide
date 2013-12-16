@@ -1,0 +1,45 @@
+@include breakpoint('portable')
+  .footer-primary
+    // remove default section padding
+    .secondary-background
+      padding: 0
+      .container
+        padding: 0
+
+    // style trigger
+    h4
+      padding: 20px
+      cursor: pointer
+      &:after
+        font-family: 'icomoon'
+        content: "\e617"
+        float: right
+      &.toggle-triggered
+        &:after
+          content: "\e616"
+
+    // style expand/collapse nav
+    nav
+      box-shadow: inset 0 0 50px -10px black 
+      background: darken(color(secondary), 5)
+      max-height: 300px
+      overflow: hidden
+      &.toggle
+        max-height: 0
+      a
+        padding: 15px 20px
+        text-decoration: none
+        font-size: em(17px)
+        &:hover
+          color: white !important
+      li
+        border-top: 1px solid color(secondary)
+        &:first-child
+          border-top: 0
+
+// palm specific spacing overrides
+@include breakpoint('palm')
+  .footer-primary
+    h4, nav a
+      padding-left: 10px
+      padding-right: 10px

@@ -1,11 +1,16 @@
-%p.sg-p RSportz currently uses Formatted Form to generate its form based on Bootstrap markup. 
+%p.sg-p RSportz currently uses Formatted Form to generate its form based on Bootstrap markup. The <span class="sg-code">.inline-selects</span> class can be used to indicate that children select elements should be inline and not block. The <span class="sg-code">.form-small</span> class can be used to make the elements within a form smaller.
 
 %form
   .grid
-    .grid__item.one-half.palm--one-whole
+    .grid__item.one-third.palm--one-whole
       %input{type:'text', placeholder:'Email'}
-    .grid__item.one-half.palm--one-whole
+    .grid__item.one-third.palm--one-whole
       %input{type:'password', placeholder:'Password'}
+    .grid__item.one-third.palm--one-whole
+      %select
+        %option Option One
+        %option Option Two
+        %option Option Three
   .grid
     .grid__item.one-third.palm--one-whole
       %input.large.solid.button.primary{type:'submit'}

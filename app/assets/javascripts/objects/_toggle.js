@@ -9,7 +9,11 @@ $(document).ready(function(){
     // when the toggler is clicked
     $(this).click(function(){
       // prevent the html click event from firing
-      event.stopPropagation();
+      if(event.stopPropagation){
+        event.stopPropagation();
+      }
+      // toggle class on trigger
+      $(this).toggleClass('toggle-triggered');
       // find the target(s)
       var tar = $(this).attr('data-toggle');
       // toggle the "toggle" class on the target(s)
@@ -25,6 +29,7 @@ $(document).ready(function(){
 
   // if clicked off the toggler
   $('html').click(function(){
-    $('.toggle').removeClass('toggle');
+    $('.sticky-main .toggle-triggered').removeClass('toggle-triggered');
+    $('.sticky-main .toggle').removeClass('toggle');
   });
 });

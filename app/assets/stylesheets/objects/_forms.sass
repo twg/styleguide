@@ -1,29 +1,112 @@
-input[type="text"], input[type="email"], input[type="password"]
+input[type="text"], input[type="email"], input[type="password"], select, textarea
   border: 1px solid color(secondary)
   padding: 14px
   margin-top: 0
-  margin-bottom: 7px
+  margin-bottom: 15px
   font-size: em(18px)
   border-radius: 5px
   width: 100%
   display: block
   box-sizing: border-box
-  @include transition(all 0.1s linear)
+  @include transition(all 0.075s linear)
   &:focus
     padding-left: 28px
     outline: 0
     border-color: color(primary)
 
-input[type="submit"]
-  width: 100%
-  display: block
-  box-sizing: border-box
+textarea
+  min-height: 135px
+  &:focus
+    padding-left: 14px
+
+select
+  height: 51px
+  background: white
+
+.inline-selects select
+  width: auto 
+  display: inline-block
 
 .focus-indicator
   @extend .icon-caret-right
-  @extend [class^="icon-"]
+  @extend .icon
   color: color(primary)
   font-size: em(32px)
-  margin-top: -47px
+  margin-top: -55px
   margin-left: 10px
   float: left
+
+label
+  margin-bottom: 5px
+  display: inline-block
+
+.control-group.error *
+  @include transition(all 0.2s linear)
+
+.control-group.error
+  label, .focus-indicator
+    color: text(error)
+  input[type="text"], input[type="email"], input[type="password"]
+    border-color: text(error)
+    border-bottom-left-radius: 0 
+    border-bottom-right-radius: 0 
+    border-bottom: 0
+  span
+    border: 1px solid text(error)
+    background: color(error)
+    color: text(error)
+    border-top: 0
+    margin-top: -15px
+    margin-bottom: 15px
+    display: block
+    padding: 5px
+    border-bottom-left-radius: 5px 
+    border-bottom-right-radius: 5px 
+    font-size: em(14px)
+  select
+    border: 1px solid text(error)
+    color: text(error)
+
+  &.focused
+    label, .focus-indicator
+      color: text(info)
+    input[type="text"], input[type="email"], input[type="password"]
+      border-color: text(info)
+    span
+      border-color: text(info)
+      background: color(info)
+      color: text(info)
+    select
+      border-color: text(info)
+      color: text(info)
+
+.input-prepend
+  input[type="text"], input[type="email"], input[type="password"]
+    border-top-left-radius: 0 
+    border-top-right-radius: 0 
+    border-top: 0
+  .add-on
+    border: 1px solid text(tertiary-lighter)
+    background: color(tertiary-lighter)
+    color: text(tertiary-lighter)
+    border-bottom: 0
+    display: block
+    padding: 5px
+    border-top-left-radius: 5px 
+    border-top-right-radius: 5px 
+    font-size: em(14px)
+    display: block
+
+.form-small
+  input[type="text"], input[type="email"], input[type="password"], select, textarea
+    padding: 7px
+    font-size: em(14px)
+    margin-bottom: 0
+    height: auto
+    @include breakpoint('portable')
+      margin: 10px 0
+  .focus-indicator
+    display: none
+
+.placeholder
+  color: #aaa

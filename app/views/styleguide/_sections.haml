@@ -6,7 +6,15 @@
       %th Modifiers
       %th Descriptions
   %tbody
-    - {'normal' => 20, 'large' => 50}.each do |key, value|
+    %tr
+      %td
+        %span.sg-code .disabled
+      %td Disabled section (non-clickable).
+    %tr
+      %td 
+        %span.sg-code .inset
+      %td Add inner drop-shadow to top
+    - {'normal' => 20, 'large' => 50, 'narrow' => 10, 'full' => 0}.each do |key, value|
       %tr
         %td 
           %span.sg-code .#{key}

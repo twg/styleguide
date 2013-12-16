@@ -9,37 +9,45 @@
     sections << section
   end
 
-!!!
+!!! 5
 %html
   %head
     %title Styleguide
-    = stylesheet_link_tag 'all'    
+    %meta{:charset => "utf-8"}
+    %meta{'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+    // %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %meta{content:'initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width', name:'viewport'}
-  %body
-    %nav.sg-nav
-      %a.sg-logo{href:'#', target:'_blank'}
-        = image_tag 'logo.png'
-      %ul
-        - for section in sections
-          %li
-            %a{href:"##{section}"} 
-              = section.titleize
-      %a.sg-logo-twg{href:'http://www.theworkinggroup.ca', target:'_blank'}
-        = image_tag 'logo-twg.png'
+    = favicon_link_tag 'favicon.png'
+    <!--[if !IE]><!-->#{stylesheet_link_tag 'application'}<!--<![endif]-->
+    <!--[if IE]>#{javascript_include_tag 'plugins/html5shiv.js'}#{stylesheet_link_tag 'ie'}<![endif]-->
+  %body.styleguide.sticky-wrapper
+    .sticky-main
+      %nav.sg-nav
+        %a.sg-logo{href:'#', target:'_blank'}
+          = image_tag 'logo.png'
+        %ul
+          - for section in sections
+            %li
+              %a{href:"##{section}"} 
+                = section.titleize
+        %a.sg-logo-twg{href:'http://www.theworkinggroup.ca', target:'_blank'}
+          = image_tag 'logo-twg.png'
 
-    .sg-content
-      %h1.sg-h1 RSportz Styleguide
+      .sg-content
+        %h1.sg-h1 RSportz Styleguide
 
-      - for section in sections 
-        %section.sg-section{class:"sg-section-#{section}"}
-          %a.sg-anchor{id:"#{section}", name:"#{section}"}
-          .sg-section-head
-            %h2.sg-h2= section.titleize
-            .sg-path= "...app/views/styleguide/_#{section}.haml"
-          - if File.exists?("app/views/styleguide/_#{section}.haml")
-            = render partial: "styleguide/#{section}"
+        - for section in sections 
+          %section.sg-section{class:"sg-section-#{section}"}
+            %a.sg-anchor{id:"#{section}", name:"#{section}"}
+            .sg-section-head
+              %h2.sg-h2= section.titleize
+              .sg-path= "...app/views/styleguide/_#{section}.haml"
+            - if File.exists?("app/views/styleguide/_#{section}.haml")
+              = render partial: "styleguide/#{section}"
 
-          - else
-            = render partial: "styleguide/initializers/#{section}"
+            - else
+              = render partial: "styleguide/initializers/#{section}"
 
-    = javascript_include_tag 'all.js'
+      = javascript_include_tag 'application'
+      /[if lt IE 9]
+        = javascript_include_tag 'plugins/jquery.placeholder.js'

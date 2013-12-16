@@ -1,4 +1,4 @@
-/* Files that must be loaded first (and/or in a specific order)
+/* Files that must be loaded first (and/or in a specific order) */
 @import "initializers/bourbon/bourbon"
 @import "initializers/icomoon/style"
 @import "initializers/mixins/*"
@@ -10,6 +10,8 @@
 @import "initializers/images"
 @import "initializers/modifiers"
 @import "initializers/spacing"
+@import "initializers/icomoon/boxed"
+@import "initializers/sticky-footer"
 
 /* Self contained component files */
 @import "objects/*"
@@ -17,3 +19,5 @@
 
 /* Page specific overrides */
 @import "pages/*"
+
+/* Unfortunately the current version of sass-rails has a known bug where new SASS files need to be imported manually before any glob imports will pick them up, after this is done the manual import can safely be removed. https://github.com/rails/sass-rails/issues/107 */

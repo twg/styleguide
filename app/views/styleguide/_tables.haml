@@ -1,6 +1,8 @@
-%p.sg-p Basic tables can be created by simply applying the <span class="sg-code">.basic</span> class to any table element. This project uses the <a href="http://fooplugins.com/footable-demos/" class="sg-a" target="_blank">FooTable</a> to handle responsive tables. FooTable allows specific columns to be hidden at specific breakpoints by applying the "data-hide" attribute to the "th" element. Columns can be hidden at the either the <span class="sg-code">palm</span> and/or the <span class="sg-code">portable</span> breakpoints.
+%p.sg-p Basic tables can be created by simply using the <span class="sg-code">%table</span> element. Secondary tables can be created by applying the <span class="sg-code">.secondary</span> modifier to any table.
 
-%table.basic
+%p.sg-p This project uses the <a href="http://fooplugins.com/footable-demos/" class="sg-a" target="_blank">FooTable</a> as one method to handle responsive tables. FooTable allows specific columns to be hidden at specific breakpoints by applying the "data-hide" attribute to the "th" element. Columns can be hidden at either the <span class="sg-code">palm</span> or the <span class="sg-code">portable</span> breakpoint.
+
+%table
   %thead
     %tr
       %th{data:{class:'expand'}} Gender
@@ -17,3 +19,30 @@
         %td Round Robin
         %td 
           %a.secondary.button{href:'#'} Register to GD3
+
+%table.sg-table
+  %thead
+    %tr
+      %th Modifiers
+      %th Descriptions
+  %tbody
+    %tr
+      %td 
+        %span.sg-code .secondary 
+      %td Apply secondary styling to table.
+    %tr
+      %td 
+        %span.sg-code .striped 
+      %td Add zebra striping to table.
+    %tr
+      %td 
+        %span.sg-code .toggleable 
+      %td Enable table to contain toggleable elements (ie. with <span class="sg-code">data-toggle="#foo"</span>).
+    %tr
+      %td 
+        %span.sg-code .responsive 
+      %td Stack table cells at the portable breakpoint. This is an alternative responsive table solution to the FooTables solution noted above.
+    %tr
+      %td 
+        %span.sg-code .narrow 
+      %td Reduced cell padding.

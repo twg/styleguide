@@ -1,21 +1,29 @@
 .alert
   padding: 10px
   position: relative
-  @extend .icon-remove
-  &:before
-    @extend [class^="icon-"]
-    font-family: 'icomoon'
-    position: absolute
-    right: 10px 
-    top: 10px 
-    cursor: pointer
+  overflow: hidden
+  max-height: 100px
+  z-index: 100
+  @include box-shadow(0 2px 2px rgba(black,0.15))
+  @include transition(all 0.3s linear)
+  &:not(.static)
+    @extend .icon-remove
+    &:before
+      @extend .icon
+      font-family: 'icomoon'
+      position: absolute
+      right: 10px 
+      top: 10px 
+      cursor: pointer
 
   &.error
     @extend .error-background
-    border: 1px solid text(error)
   &.success
     @extend .success-background
-    border: 1px solid text(success)
   &.info
     @extend .info-background
-    border: 1px solid text(info)
+
+  &.dismissed
+    max-height: 0
+    padding: 0 10px
+    opacity: 0

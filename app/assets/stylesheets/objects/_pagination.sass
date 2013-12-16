@@ -1,0 +1,46 @@
+.pagination
+  border-radius: 5px
+  border: 1px solid color(tertiary-light)
+  display: inline-block
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+    +clearfix
+  li
+    float: left
+    &.active a
+      font-weight: bold
+      cursor: default
+      color: white
+      background: color(secondary)
+    &.disabled a
+      cursor: default
+      background: color(tertiary-lighter)
+      color: color(tertiary)
+  a
+    display: block
+    padding: 5px 10px
+    text-decoration: none
+    border-left: 1px solid color(tertiary-light)
+    font-size: em(18px)
+    &:hover
+      background: color(tertiary-lighter)
+  li:first-child a
+    border-left: 0
+
+  @include breakpoint('lap')
+    a
+      padding: 10px 15px
+
+  @include breakpoint('palm')
+    width: 100%
+    ul
+      width: 100%
+    li
+      display: none
+      text-align: center
+    .next, .prev
+      display: inline-block
+      float: left
+      width: 50%

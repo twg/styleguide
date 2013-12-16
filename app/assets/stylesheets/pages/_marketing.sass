@@ -1,8 +1,27 @@
-// Adds a small amount of left/right margining to the marketing banner title.
-// This spacing will ensure that at the desk breakpoint each line contains two words.
-.marketing-banner-title
-  margin-left: 20px
-  margin-right: 20px
-  @include breakpoint(palm)
-    margin-left: 0
-    margin-right: 0
+.home-page
+  // Adds a small amount of left/right margining to the marketing banner title.
+  // This spacing will ensure that at the desk breakpoint each line contains two words.
+  .marketing-banner-title
+    margin-left: 20px
+    margin-right: 20px
+    @include breakpoint(palm)
+      margin-left: 0
+      margin-right: 0
+
+  // position "Try it Today!" arrow in footer form
+  .footer-form-try-arrow
+    position: absolute
+    bottom: 100%
+    left: 0
+
+  header.white-background
+    background: white !important
+
+  // tighten up space between form elements
+  input[type="text"], input[type="email"], input[type="password"], select
+    margin-bottom: 7px
+  .focus-indicator
+    margin-top: -48px
+  .control-group.error
+    span
+      margin-top: -7px

@@ -1,0 +1,109 @@
+body.org_dashboards-page{
+  .group:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  .pdf_card {
+    .membership-card {
+      margin: 20% auto 0 auto;
+    }
+  }
+
+  .membership-card {
+    font-family: 'Verdana';
+    box-sizing: border-box;
+    border-radius: 2mm;
+    width: 85.0mm;
+    height: 55.0mm;
+    border: 0.5mm solid #ccc;
+    position: relative;
+    background: url(data:image/jpg;base64,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) repeat;
+    .header {
+     height: 12.00mm;
+      border-bottom: 1mm solid #eee;
+      width: 99.8%;
+      margin: 0 auto;
+      padding-top: 4mm;
+      .logo {
+        width: 8mm;
+        height: 8mm;
+        float: left;
+        margin-left: 5mm;
+      }
+      .lanyard {
+        width: 60mm;
+        float: left;
+        margin: 2mm 0 0 5mm;
+        color: #999;
+        font-weight: bold;
+        font-size: 10pt;
+      }
+    }
+    .body {
+      .avatar {
+        float: left;
+        width: 30mm;
+        img {
+          display: block;
+          width: 25mm;
+          height: 25mm;
+          padding: 1mm;
+          background: #fff;
+          border: 0.5mm solid #ccc;
+          border-radius: 1mm;
+          position: relative;
+          top: 5mm;
+          left: 5mm;
+        }
+      }
+      .info {
+        float: left;
+        width: 49mm;
+        margin-left: 5mm;
+        .name {
+          text-transform: uppercase;
+          color: #0454A3;
+          font-size: 16px;
+          padding-top: 5mm;
+          margin-bottom: 3mm;
+        }
+        .group {
+          margin-bottom: 1mm;
+          line-height: 12px;
+        }
+        .field {
+          float: left;
+          width: 25mm;
+          padding-right: 1mm;
+          text-align: left;
+          font-size: 3mm;
+          font-weight: bold;
+          color: #999;
+        }
+        .value {
+          float: left;
+          width: 22mm;
+          font-size: 3mm;
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+body.org_dashboards-page{
+  .dashboard-versus{
+    border-bottom: 1px solid color(tertiary-lighter);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    padding: 0 5px 1px 5px;
+    background: color(secondary);
+    color: white;
+  }
+}

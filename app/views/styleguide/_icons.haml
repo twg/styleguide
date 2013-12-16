@@ -1,13 +1,29 @@
-:ruby
-  # scan the icomoon stylesheet for all the icon names and store them in an array
-  icons = File.read('app/assets/stylesheets/initializers/icomoon/style.css').scan(/icon\-[^:]*/)
-  icons.shift
-
-%p.sg-p Icons are generated using the <a class="sg-a" href="http://icomoon.io/app" target="_blank">IcoMoon web app</a>. All icons are part of the Font Awesome icon set.
-
-.grid.sg-icons
-  - icons.each do |icon|
-    .grid__item.one-third.palm--one-whole.lap--one-half
-      .sg-icon
-        %i{class:"#{icon}"}
-        %span.sg-code= "%i." + icon
+-# :ruby
+-#   # scan the icomoon stylesheet for all the icon names and store them in an array
+-#   icons = File.read('app/assets/stylesheets/initializers/icomoon/style.css').scan(/icon\-[^:]*/)
+-#   icons.shift
+-#   icons.each do |icon|
+-#     icon.sub! 'icon-', ''
+-#   end
+-# 
+-# %p.sg-p Icons are generated using the <a class="sg-a" href="http://icomoon.io/app" target="_blank">IcoMoon web app</a>. All icons are part of the Font Awesome icon set.
+-# 
+-# .grid.sg-icons
+-#   - icons.each do |icon|
+-#     .grid__item.one-third.palm--one-whole.lap--one-half
+-#       .sg-icon
+-#         = icon(icon)
+-#         %span.sg-code= "= icon('#{icon}')"
+-# 
+-# %table.sg-table
+-#   %thead
+-#     %tr
+-#       %th Modifiers
+-#       %th Descriptions
+-#   %tbody
+-#     %tr
+-#       %td 
+-#         .card.secondary-background.constant
+-#           .card-body
+-#             .boxed= icon('twitter')
+-#       %td Enclose icon in a box 

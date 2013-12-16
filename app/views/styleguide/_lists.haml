@@ -1,0 +1,37 @@
+%p.sg-p Default lists have 10px of spacing between items.
+
+%h3.sg-h3 Inline List
+
+.normal-bottom
+  %ul.inline
+    %li ONE 
+    %li TWO
+    %li THREE
+    %li FOUR
+    %li FIVE
+
+%h3.sg-h3 Stacked List
+
+.normal-bottom
+  %ul.stacked
+    %li ONE 
+    %li TWO
+    %li THREE
+    %li FOUR
+    %li FIVE
+
+%table.sg-table
+  %thead
+    %tr
+      %th Modifiers
+      %th Descriptions
+  %tbody
+    - {'narrow' => 5, 'wide' => 20, 'full' => 0}.each do |key, value|
+      %tr
+        %td 
+          %span.sg-code .#{key}
+        %td #{value}px of spacing between items
+    %tr
+      %td
+        %span.sg-code .inset
+      %td Add left/right padding to list items (based on narrow/wide/full).

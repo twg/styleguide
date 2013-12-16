@@ -1,15 +1,66 @@
-nav.secondary
-  border: 1px solid color(secondary-lighter)
-  border-radius: 5px
-  ul
-    margin: 0
-    padding: 0
-    list-style-type: none
-  a
-    display: block
-    padding: 8px 14px
-    font-size: em(18px)
-    &:hover
-      background: color(secondary-lighter)
-      color: color(secondary-light)
+@include breakpoint('desk', true)
+  nav.secondary
+    border: 1px solid color(secondary-lighter)
+    border-radius: 5px
+    overflow: hidden
+    ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+    a
+      display: block
+      padding: 11px
+      font-size: em(18px)
+      background: white
       text-decoration: none
+      color: color(tertiary-light)
+      &:hover, &.active
+        background: color(secondary-lightest)
+        color: color(secondary-light)
+        text-decoration: none
+
+@include breakpoint('palm')
+  nav.secondary, .nav-secondary-trigger
+    margin-left: -10px
+    margin-right: -10px
+@include breakpoint('lap')
+  nav.secondary, .nav-secondary-trigger
+    margin-left: -20px
+    margin-right: -20px
+@include breakpoint('portable')
+  nav.secondary
+    max-height: 0
+    overflow: hidden
+    ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+    a
+      background: white
+      padding: 15px 20px
+      display: block
+      border-bottom: 1px solid color(secondary-lighter)
+    .active 
+      background: color(secondary-lightest)
+      color: color(secondary-light)
+
+  // nav mobile trigger formatting
+  .nav-secondary-trigger
+    background: gray
+    color: color(tertiary)
+    border: 1px solid lighten(color(tertiary), 30)
+    display: block
+    padding: 15px 20px
+    text-decoration: none
+    font-size: em(18px)
+    margin-top: -20px
+    @include background-image(linear-gradient(white, #D9D8D7))
+    &:after
+      font-family: 'icomoon'
+      content: "\e609"
+      float: right
+    &.toggle-triggered
+      &:after
+        content: "\e60a"
+    &:hover
+      color: black !important

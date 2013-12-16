@@ -1,15 +1,15 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot');
-	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.ttf') format('truetype'),
-		url('fonts/icomoon.woff') format('woff'),
-		url('fonts/icomoon.svg#icomoon') format('svg');
+	src:asset-url('icomoon.eot');
+	src:asset-url('icomoon.eot?#iefix') format('embedded-opentype'),
+		asset-url('icomoon.ttf') format('truetype'),
+		asset-url('icomoon.woff') format('woff'),
+		asset-url('icomoon.svg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+.icon {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -61,4 +61,40 @@
 }
 .icon-caret-right:before {
 	content: "\e60c";
+}
+.icon-play-sign:before {
+	content: "\e60d";
+}
+.icon-random:before {
+	content: "\e60e";
+}
+.icon-cog:before {
+	content: "\e60f";
+}
+.icon-signout:before {
+	content: "\e610";
+}
+.icon-dashboard:before {
+	content: "\e611";
+}
+.icon-cogs:before {
+	content: "\e612";
+}
+.icon-arrow-left:before {
+	content: "\e613";
+}
+.icon-group:before {
+	content: "\e614";
+}
+.icon-trophy:before {
+	content: "\e615";
+}
+.icon-plus:before {
+	content: "\e616";
+}
+.icon-minus:before {
+	content: "\e617";
+}
+.icon-star:before {
+	content: "\e618";
 }

@@ -1,6 +1,41 @@
-.card
-  background: white
-  border: 1px solid color(secondary-lighter)
-  border-radius: 5px
-  &.inset
-    padding: 20px
+@include breakpoint('desk')
+  .card
+    background: white
+    border: 1px solid color(secondary-lighter)
+    border-radius: 5px
+    overflow: hidden
+    word-break: break-word
+    .card-header
+      @include box-shadow(inset 0 -15px 15px -15px rgba(black, 0.1))
+      border-bottom: 1px solid color(secondary-lighter)
+      padding: 10px 30px
+    .card-body
+      padding: 20px 30px
+    .card-footer
+      border-top: 1px solid color(secondary-lighter)
+      padding: 10px 30px
+    &.large
+      .card-header
+        padding: 40px
+      .card-body
+        padding: 40px
+      .card-footer
+        padding: 40px
+    &.narrow
+      .card-header, .card-body, .card-footer
+        padding: 10px 15px
+
+.card.center-line
+  @include linear-gradient(to right, white 0%, white 50%, color(tertiary-lighter) 50%, white 50.4%, white 100%)
+  h1, h2, h3, h4, h5, h6
+    background: white
+
+@include breakpoint('portable')
+  .card.constant
+    word-break: break-word
+    background: white
+    border: 1px solid color(secondary-lighter)
+    border-radius: 5px
+    overflow: hidden
+    .card-body
+      padding: 20px

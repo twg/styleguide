@@ -6,48 +6,57 @@
 body, html
   font-family: 'PT Sans', sans-serif
   font-size: 100%
+  -webkit-text-size-adjust: 100%
+  // base font-size is defined in grid/_variables.sass as a grid hack
 
 /* ========================================================= */
 /* Headings */
 /* ========================================================= */
 
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+
 h1
   font-size: em(42px)
-  font-weight: bold
   line-height: em(18px)
   @include breakpoint(palm)
-    font-size: em(38px)
+    font-size: em(24px)
 
 h2
   font-size: em(33px)
-  font-weight: bold
+  @include breakpoint(palm)
+    font-size: em(20px)
 
 h3
   font-size: em(26px)
-  font-weight: normal
+  @include breakpoint(palm)
+    font-size: em(20px)
 
 h4
   font-size: em(20px)
-  font-weight: bold
 
 h5
   font-size: em(18px)
-  font-weight: normal
 
 h6
   font-size: em(16px)
-  font-weight: bold
+
+.h0
+  font-size: em(65px)
+  line-height: em(13px) 
+  @include breakpoint(palm)
+    font-size: em(24px)
+    line-height: normal
 
 /* ========================================================= */
 /* Anchors */
 /* ========================================================= */
 
 a
-  color: color(secondary)
-  text-decoration: none
+  color: color(secondary-light)
+  @include transition (color 0.1s linear)
   &:hover:not(.disabled)
-    color: text(secondary-light)
-    text-decoration: underline
+    color: color(primary)
 
 /* ========================================================= */
 /* Paragraphs */
@@ -70,19 +79,28 @@ blockquote
     font-size: em(24px)
     font-style: italic
     position: relative
+    margin-bottom: 40px
     &:before, &:after
-      opacity: 0.2
+      opacity: 0.15
       position: absolute
-      @include transform(scale(5))
+      @include transform(scale(7))
     &:before
       content: open-quote 
-      top: 0
-      left: -20px 
+      top: 60px 
+      left: -60px 
     &:after
       content: close-quote 
-      bottom: 0
-      right: -20px 
+      bottom: -60px 
+      right: 0 
   cite
     font-style: normal
     &:before
       content: '-'
+
+/* ========================================================= */
+/* HR */
+/* ========================================================= */
+
+hr
+  border: 0
+  border-bottom: 1px solid color(tertiary-lighter)

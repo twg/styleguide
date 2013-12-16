@@ -1,4 +1,11 @@
 /* ========================================================= */
+/* HTML5 Elements */
+/* ========================================================= */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary
+  display: block
+
+/* ========================================================= */
 /* Spacing */
 /* ========================================================= */
 
@@ -16,54 +23,52 @@ pre, table, fieldset, hr
     margin-bottom: 0
 
 /* ========================================================= */
-/* Flush Bottom */
+/* Negative Bottom */
+/* Main for use on marketing site */
 /* ========================================================= */
 
-.flush-bottom
-  margin-bottom: 0
-
-@each $bp in $bps
-  @include breakpoint($bp)
-    .#{$bp}--flush-bottom
-      margin-bottom: 0 
-
-// ensure flush bottom works correctly within sections
 section
-  .flush-bottom
-    margin-bottom: $normal-bottom * -1
+  @include prefixed('negative-bottom')
+    margin-bottom: $normal-bottom * -1 !important
   &.large
-    .flush-bottom
-      margin-bottom: $large-bottom * -1
+    @include prefixed('negative-bottom')
+      margin-bottom: $large-bottom * -1 !important
 
 @each $bp in $bps
   @include breakpoint($bp)
     section
-      .#{$bp}--flush-bottom
-        margin-bottom: $normal-bottom * -1
-      &.large
-        .#{$bp}--flush-bottom
-          margin-bottom: $large-bottom * -1
+      &.#{$bp}--normal
+        .negative-bottom
+          margin-bottom: $normal-bottom * -1 !important
+      &.#{$bp}--large
+        .negative-bottom
+          margin-bottom: $large-bottom * -1 !important
+
+
+/* ========================================================= */
+/* Flush Bottom */
+/* ========================================================= */
+
+@include prefixed('flush-bottom')
+  margin-bottom: 0 !important
+
+/* ========================================================= */
+/* Small Bottom */
+/* ========================================================= */
+
+@include prefixed('small-bottom')
+  margin-bottom: $normal-bottom / 2 !important
 
 /* ========================================================= */
 /* Normal Bottom */
 /* ========================================================= */
 
-.normal-bottom
-  margin-bottom: $normal-bottom
-
-@each $bp in $bps
-  @include breakpoint($bp)
-    .#{$bp}--normal-bottom
-      margin-bottom: $normal-bottom
+@include prefixed('normal-bottom')
+  margin-bottom: $normal-bottom !important
 
 /* ========================================================= */
 /* Large Bottom */
 /* ========================================================= */
 
-.large-bottom
-  margin-bottom: $large-bottom
-
-@each $bp in $bps
-  @include breakpoint($bp)
-    .#{$bp}--large-bottom
-      margin-bottom: $large-bottom
+@include prefixed('large-bottom')
+  margin-bottom: $large-bottom !important

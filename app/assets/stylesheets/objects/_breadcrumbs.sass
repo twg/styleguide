@@ -13,12 +13,13 @@
     margin-right: -15px
     overflow: hidden
   a
-    background: color(secondary-light)
+    background: color(secondary-dark)
     display: block
     padding: 7px 10px
     padding-left: 20px
     position: relative
     color: rgba(color(secondary-lighter), 0.8)
+    text-decoration: none
     @include transition(all 0.15s linear)
     &:after, &:before
       position: absolute
@@ -29,18 +30,21 @@
       left: 100%
       border-top: 50px solid transparent
       border-bottom: 50px solid transparent
-      border-left: 20px solid color(secondary-light)
+      border-left: 20px solid color(secondary-dark)
       margin-left: -9px
       z-index: 2
       @include transition(all 0.15s linear)
     &:before
       z-index: 1
-      border-left-color: color(secondary-dark)
+      border-left-color: color(secondary)
       margin-left: -4px 
-    &:hover
 
   a:hover, li:last-child a
     text-decoration: none
-    background: lighten(color(secondary-light), 10)
+    background: lighten(color(secondary-dark), 15)
+    color: white
     &:after
-      border-left-color: lighten(color(secondary-light), 10)
+      border-left-color: lighten(color(secondary-dark), 15)
+  li:last-child a
+    &:before
+      border-left-color: transparent

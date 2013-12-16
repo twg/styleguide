@@ -1,0 +1,20 @@
+.org_registrations_division_people-page,
+.org_registrations_accounts-page,
+.org_registrations_division_teams-page
+
+  .registration-waiver
+    @include breakpoint('desk')
+      padding: 14px
+      border: 1px solid color(secondary)
+      border-radius: 5px
+      max-height: 150px
+      overflow: auto
+
+  .registration-facebook
+    padding: 50px
+    @include breakpoint('palm')
+      padding: 20px
+
+  .registration-card
+    @include breakpoint(desk)
+      @include linear-gradient(to right, white 0%, white 68%, color(tertiary-lighter) 68%, white 68.4%, white 100%)

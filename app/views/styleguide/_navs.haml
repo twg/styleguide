@@ -1,40 +1,7 @@
-%h3.sg-h3 Primary 
+.large-bottom.contained
+  %h3.sg-h3 Primary 
 
-%nav.primary.large-bottom{data:{toggle:'#primary-nav-left, #primary-nav-right'}}
-  %ul#primary-nav-left
-    %li
-      %a{href:'#'} News
-    %li
-      %a{href:'#'} Competitions
-    %li
-      %a{href:'#', data:{toggle:'#about-dropdown'}} About
-      %nav.dropdown#about-dropdown
-        %ul
-          %li
-            %a{href:'#'} 2013/14 Registration Fees
-          %li
-            %a{href:'#'} 2013/14 Schedule
-          %li
-            %a{href:'#'} Board of Directors 
-          %li
-            %a{href:'#'} Coaches Clinic
-          %li
-            %a{href:'#'} Code of Conduct
-          %li
-            %a{href:'#'} Contact Us
-          %li
-            %a{href:'#'} FAQ's
-          %li
-            %a{href:'#'} NJB History
-          %li
-            %a{href:'#'} Registration Instructions
-          %li
-            %a{href:'#'} Sponsors
-    %li
-      %a{href:'#'} Register
-  %ul#primary-nav-right
-    %li
-      %a{href:'#'} Login
+  %p.sg-p Unlike other navs, due to the primary nav's complexity it was designed as a signleton. This means it is not intended to be reused in other sections of the site. 
 
 %h3.sg-h3 Secondary 
 
@@ -50,3 +17,17 @@
       %a{href:'#'} 2013/14 Schedule
     %li
       %a{href:'#'} Board of Directors
+
+.large-bottom
+%h3.sg-h3 Simple 
+
+%nav.simple
+  %ul
+    %li
+      %a{href:'#'} Home
+    %li
+      %a{href:'#'} About
+    %li
+      %a{href:'#'} Legal
+    %li
+      %a{href:'#'} Privacy

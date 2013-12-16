@@ -10,6 +10,32 @@
       %td 
         .centered .centered
       %td Center aligns text. 
+    - for bp in ['palm', 'lap', 'portable', 'desk']
+      %tr
+        %td 
+          %span.sg-code .#{bp}--centered
+        %td Center align text at the #{bp} breakpoint.
+
+    %tr
+      %td 
+        .text-right .text-right
+      %td Right aligns text. 
+    - for bp in ['palm', 'lap', 'portable', 'desk']
+      %tr
+        %td 
+          %span.sg-code .#{bp}--text-right
+        %td Right align text at the #{bp} breakpoint.
+
+    %tr
+      %td 
+        .text-left .text-left
+      %td Left aligns text. 
+    - for bp in ['palm', 'lap', 'portable', 'desk']
+      %tr
+        %td 
+          %span.sg-code .#{bp}--text-left
+        %td Left align text at the #{bp} breakpoint.
+
     %tr
       %td 
         .left .left
@@ -28,6 +54,10 @@
       %td Applies relative positioning. 
     %tr
       %td
+        %h4.strong .strong
+      %td Apply bolded text formatting.
+    %tr
+      %td
         %h4.uppercase .uppercase
       %td Apply uppercase text formatting.
     %tr
@@ -40,6 +70,39 @@
       %td Apply raised formatting with a subtle drop-shadow.
     %tr
       %td
-        .card.inset.secondary-background
-          %h4.inverted .inverted
+        .card.secondary-background
+          .card-body
+            %h4.inverted .inverted
       %td Apply the inverted style for use on dark backgrounds.
+
+    %tr
+      %td 
+        %span.sg-code .flat
+      %td Flatten all corners.
+
+    - for bp in ['palm', 'lap', 'portable', 'desk']
+      %tr
+        %td 
+          %span.sg-code .#{bp}--flat
+        %td Flatten all corners at the #{bp} breakpoint.
+
+    - for key in ['left', 'right', 'top', 'bottom']
+      %tr
+        %td 
+          %span.sg-code .flat-#{key}
+        %td Flatten the #{key} radii.
+      - for bp in ['palm', 'lap', 'portable', 'desk']
+        %tr
+          %td 
+            %span.sg-code .#{bp}--flat-#{key}
+          %td Flatten the #{key} radii at the #{bp} breakpoint.
+
+    %tr
+      %td 
+        %span.sg-code .full-width
+      %td Occupy 100% width.
+    - for bp in ['palm', 'lap', 'portable', 'desk']
+      %tr
+        %td 
+          %span.sg-code .#{bp}--full-width
+        %td Occupy 100% width at the #{bp} breakpoint.

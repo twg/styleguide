@@ -16,8 +16,9 @@
       %td Applies the secondary colour to the button.
     %tr
       %td 
-        .card.inset.secondary-background
-          %a.inverted.button{href:''} .inverted
+        .card.secondary-background
+          .card-body
+            %a.inverted.button{href:''} .inverted
       %td Applies the inverted colour to the button for use on a dark background. 
     %tr
       %td 
@@ -25,13 +26,17 @@
       %td Fills the button with colour as opposed to the default outlined look.
     %tr
       %td 
+        %a.small.button{href:''} .small
+      %td Decrease the size of the button.
+    %tr
+      %td 
         %a.large.button{href:''} .large
       %td Increases the size of the button.
     %tr
       %td 
-        %a.disabled.button{href:''} .disabled
-      %td Applies the disabled state. 
+        %a.huge.button{href:''} .huge
+      %td Really increases the size of the button.
     %tr
       %td 
-        %a.palm--full-width.button{href:''} .palm--full-width
-      %td This button will occupy 100% width at the palm breakpoint. Other variants of full-width include <span class="sg-code">.lap--full-width</span>, <span class="sg-code">.portable--full-width</span>, <span class="sg-code">.desk--full-width</span> and <span class="sg-code">.full-width</span>. 
+        %a.disabled.button{href:''} .disabled
+      %td Applies the disabled state. 

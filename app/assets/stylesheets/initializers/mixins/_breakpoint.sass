@@ -1,7 +1,8 @@
 // breakpoint helper
 @mixin breakpoint($bp, $show:false)
-  @if $show and $old-ie
-    @content
+  @if $old-ie
+    @if $show or $bp == desk 
+      @content
   @else 
     @if $bp == palm
       @media (max-width: $palm)

@@ -23,6 +23,10 @@ body, html
   padding: 0
   margin: 0
 
+/* ensure styleguide background is white */
+.styleguide
+  background: white
+
 /* ========================================================= */
 /* Navigation */
 /* format styleguide side nav */
@@ -215,6 +219,9 @@ $sg-color-counter: 0
   td, th
     padding: 10px 0
     border-bottom: 1px solid $sg-medium-gray
+    background: transparent !important
+    color: black !important
+    vertical-align: top
     &:last-child
       padding-left: 20px
 
@@ -232,13 +239,13 @@ $sg-color-counter: 0
   padding: 4px 3px
   display: inline-block
   font-family: monospace
+  font-size: 12px
   line-height: normal
   color: black
 
 .sg-path
   @extend .sg-code
   float: right
-  margin-top: -26px
   display: inline-block
   color: $sg-primary
   font-size: 10px

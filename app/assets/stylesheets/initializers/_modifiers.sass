@@ -1,17 +1,26 @@
-.centered
+@include prefixed('centered')
   text-align: center
 
-.left
+@include prefixed('text-left')
+  text-align: left
+
+@include prefixed('text-right')
+  text-align: right
+
+@include prefixed('left')
   float: left
 
-.right
+@include prefixed('right')
   float: right
 
 .contained
-  +clearfix
+  @extend .clearfix
 
 .relative
   position: relative
+
+.strong
+  font-weight: bold
 
 .uppercase
   text-transform: uppercase
@@ -24,3 +33,42 @@
 
 .inverted
   color: white
+
+/* ========================================================= */
+/* Flatteners */
+/* ========================================================= */
+
+@include prefixed('flat')
+  border-radius: 0 !important
+
+@include prefixed('flat-left')
+  border-top-left-radius: 0 !important
+  border-bottom-left-radius: 0 !important
+
+@include prefixed('flat-right')
+  border-top-right-radius: 0 !important
+  border-bottom-right-radius: 0 !important
+
+@include prefixed('flat-top')
+  border-top-left-radius: 0 !important
+  border-top-right-radius: 0 !important
+
+@include prefixed('flat-bottom')
+  border-bottom-left-radius: 0 !important
+  border-bottom-right-radius: 0 !important
+
+/* ========================================================= */
+/* Full width */
+/* ========================================================= */
+
+@include prefixed('full-width')
+  @include box-sizing(border-box)
+  display: block
+  width: 100%
+
+/* ========================================================= */
+/* Hide */
+/* ========================================================= */
+
+@include prefixed('hide') 
+  display: none !important
