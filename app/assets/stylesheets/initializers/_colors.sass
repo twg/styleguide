@@ -4,25 +4,9 @@
 
 // color table
 $colors: ()
-$colors: new(primary-light #FBBE5A #50535A)
-$colors: new(primary #F87D30 white)
-$colors: new(primary-dark #ff6122 white)
-
-$colors: new(secondary-lightest #F1F6FC #666666)
-$colors: new(secondary-lighter #D4DEEC #5E75A4)
-$colors: new(secondary-light #6189cb white)
-$colors: new(secondary #144984 white)
-$colors: new(secondary-dark #0E3C6E white)
-
-$colors: new(tertiary-lightest #F6F7F8 #333333)
-$colors: new(tertiary-lighter #EDF1F2 #333333)
-$colors: new(tertiary-light #a6a9b0 #333333)
-$colors: new(tertiary #717171 #333333)
-$colors: new(tertiary-dark #333333 white)
-
-$colors: new(success #DFF0D8 #468847)
-$colors: new(error #F2DEDE #b94a48)
-$colors: new(info #D9EDF7 #3a87ad)
+$colors: new(primary #A2B042 white)
+$colors: new(secondary #3CB5AD white)
+$colors: new(tertiary #404041 white)
 
 // helper function to access colors 
 @function color($color)
@@ -48,7 +32,3 @@ $colors: new(info #D9EDF7 #3a87ad)
 
 .white-background
   background-color: white !important
-
-@include breakpoint('desk')
-  body, html
-    background: color(tertiary-lighter)

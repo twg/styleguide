@@ -23,78 +23,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-twitter:before {
+.icon-googleplus:before {
 	content: "\e600";
 }
 .icon-facebook:before {
 	content: "\e601";
 }
-.icon-google-plus:before {
+.icon-twitter:before {
 	content: "\e602";
-}
-.icon-user:before {
-	content: "\e603";
-}
-.icon-remove:before {
-	content: "\e604";
-}
-.icon-arrow-right:before {
-	content: "\e605";
-}
-.icon-reorder:before {
-	content: "\e608";
-}
-.icon-angle-up:before {
-	content: "\e606";
-}
-.icon-angle-down:before {
-	content: "\e607";
-}
-.icon-caret-down:before {
-	content: "\e609";
-}
-.icon-caret-up:before {
-	content: "\e60a";
-}
-.icon-caret-left:before {
-	content: "\e60b";
-}
-.icon-caret-right:before {
-	content: "\e60c";
-}
-.icon-play-sign:before {
-	content: "\e60d";
-}
-.icon-random:before {
-	content: "\e60e";
-}
-.icon-cog:before {
-	content: "\e60f";
-}
-.icon-signout:before {
-	content: "\e610";
-}
-.icon-dashboard:before {
-	content: "\e611";
-}
-.icon-cogs:before {
-	content: "\e612";
-}
-.icon-arrow-left:before {
-	content: "\e613";
-}
-.icon-group:before {
-	content: "\e614";
-}
-.icon-trophy:before {
-	content: "\e615";
-}
-.icon-plus:before {
-	content: "\e616";
-}
-.icon-minus:before {
-	content: "\e617";
-}
-.icon-star:before {
-	content: "\e618";
 }

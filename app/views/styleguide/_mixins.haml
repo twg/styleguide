@@ -1,11 +1,19 @@
 %h3.sg-h3 Breakpoint
 %p.sg-p The breakpoint helper allows you to call breakpoints by name (palm, lap, portable, or desk). This helper should always be used instead of the standard media query. In addition to calling breakpoints by name, this mixin allows you to specify a boolean variable that will either include (true) or exclude (false) the code within this media query in an IE stylesheet.
-.sg-callout @include breakpoint('palm', true)
+.sg-code @include breakpoint('palm', true)
 
 %h3.sg-h3 Clearfix
 %p.sg-p The clearfix helper implements the clearfix for clearing floats as defined by Chris Coyier <a class="sg-a" href="http://css-tricks.com/snippets/css/clear-fix/">here</a>.
-.sg-callout @extend clearfix
+.sg-code @extend clearfix
 
 %h3.sg-h3 EM
 %p.sg-p The em function will convert a pixel value into an em value. EM values are better able to scale with a browser's type size settings and thus are generally preferred for accessibility reasons. Since manually converting pixels to ems is tedious and cumbersome this function was added simplify this process.
-.sg-callout font-size: em(14px)
+.sg-code font-size: em(14px)
+
+%h3.sg-h3 Plain List
+%p.sg-p Remove ul formatting (bullets and spacing).
+.sg-code @extend .plain-list
+
+%h3.sg-h3 Prefixed
+%p.sg-p Loop through breakpoints and create prefixed versions of an object for each breakpoint (ex: .foo, .palm--foo, .lap--foo, .portable--foo, .desk--foo).
+  
