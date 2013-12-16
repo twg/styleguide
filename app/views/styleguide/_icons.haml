@@ -1,7 +1,6 @@
 :ruby
   # scan the icomoon stylesheet for all the icon names and store them in an array
   icons = File.read('app/assets/stylesheets/initializers/icomoon/style.css').scan(/icon\-[^:]*/)
-  icons.shift
   icons.each do |icon|
     icon.sub! 'icon-', ''
   end

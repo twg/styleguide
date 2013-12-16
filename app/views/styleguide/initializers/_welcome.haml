@@ -2,7 +2,7 @@
 
 
 
-%h3.sg-h3 Folders
+%h3.sg-h3 CSS Folder Structure
 
 %h4.sg-h4 Initializers
 %p.sg-p The initializers folder should contain any files that must be loaded in before other styling files. This might include things like variable definitions, color schemes, mixins, and grid systems. 
@@ -21,14 +21,21 @@
 
 %p.sg-p For styling purposes ID and tag selectors should be avoided, instead, only classes should be used. It is acceptable to use an ID for javascript purposes if deemed necessary. Dashes should be used to separate words instead of underscores or camelCasing.
 
-%p.sg-p Names should be verbose and obvious. 
-.sg-callout .button instead of .btn 
+%p.sg-p 
+  Names should be verbose and obvious. Ex:
+  %span.sg-code .button 
+  instead of 
+  %span.sg-code .btn 
 
-%p.sg-p When applicable, the "Plural Parent Pattern" should be used. 
-.sg-callout tabs and tab 
+%p.sg-p 
+  Related children should be prefixed with the parent's name. Ex:
+  %span.sg-code .button-icon 
+  instead of 
+  %span.sg-code .button > .icon 
 
-%p.sg-p Modifiers should be separated from objects.
-.sg-callout .primary.button instead of .primary-button 
+%p.sg-p 
+  Modifiers should be separated from objects. Ex:
+  %span.sg-code .large.button 
+  instead of 
+  %span.sg-code .large-button
 
-%p.sg-p Related children should be prefixed with the object name.
-.sg-callout .button-icon instead of .button > .icon 
