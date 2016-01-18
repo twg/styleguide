@@ -1,9 +1,0 @@
-// Loop through breakpoints and create prefixed versions of an object for each breakpoint.
-// (ex: .foo, .palm--foo, .lap--foo, .portable--foo, .desk--foo)
-@mixin prefixed($class)
-  .#{$class} 
-    @content
-  @each $bp in $bps
-    @include breakpoint($bp)
-      .#{$bp}--#{$class}
-        @content
