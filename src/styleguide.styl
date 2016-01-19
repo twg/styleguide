@@ -4,9 +4,10 @@
 typeface = 'Open Sans', sans-serif
 
 // sizes
-nav-width = 250px
+nav-width = 200px
 body-inset = 150px
 condensed-body-inset = 60px
+logo-size = 150px
 
 // colours
 grey = #eee
@@ -19,16 +20,6 @@ body
   padding: 20px body-inset 20px nav-width + body-inset !important
   max-width: 1420px !important
   background: white !important
-  &:after
-    content: ''
-    display: block
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    height: 3px
-    background: link
-    z-index: 99999
   @media (max-width: 1140px)
     padding: 20px condensed-body-inset 20px nav-width + condensed-body-inset !important
   @media (max-width: 970px)
@@ -45,6 +36,7 @@ sg-a, .sg-a
     color: link-hover
 
 sg-nav
+  text-align: center
   font-family: typeface
   position: fixed
   top: 0
@@ -58,6 +50,7 @@ sg-nav
   margin: 0
   list-style-type: none
   a
+    text-align: left
     text-decoration: none
     color: black
     padding: 12px 0
@@ -210,5 +203,22 @@ sg-swatch
   background: white
   border-radius: 2px
   vertical-align: top
+  @media (max-width: 500px)
+    width: 100%
+    border-top-width: 80px
   &:hover
     box-shadow: 0 6px 6px rgba(black, 0.1)
+
+sg-logo
+  display: inline-block
+  padding: 30px
+  background: #f5f5f5
+  border-radius: 50%
+  height: logo-size
+  width: logo-size
+  box-sizing: border-box
+  margin-bottom: 15px
+  img
+    max-width: 100%
+    display: inline-block
+    transform: translateY(60%)
