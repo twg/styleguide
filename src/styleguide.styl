@@ -19,6 +19,16 @@ body
   padding: 20px body-inset 20px nav-width + body-inset !important
   max-width: 1420px !important
   background: white !important
+  &:after
+    content: ''
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: 3px
+    background: link
+    z-index: 99999
   @media (max-width: 1140px)
     padding: 20px condensed-body-inset 20px nav-width + condensed-body-inset !important
   @media (max-width: 970px)
