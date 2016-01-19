@@ -10,7 +10,7 @@
     "url": "https://github.com/twg/styleguide"
   },
   "scripts": {
-    "start": "stylus --watch src/styleguide.styl --out dist/styleguide.css"
+    "start": "stylus --compress --watch src/styleguide.styl --out dist/styleguide.css"
   },
   "devDependencies": {
     "stylus": "^0.53.0"
