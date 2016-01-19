@@ -8,7 +8,7 @@ A styleguide is a page or series of pages that house project documentation. For 
 
 ##What is TWG Styleguide
 
-TWG Styleguide is a single CSS file that contains a generic and reusable styleguide theme. Since TWG Styleguide is simply a CSS file it makes no assumptions about your project's tech-stack, this means that you should easily be able to integrate the TWG Styleguide into any project.
+TWG Styleguide is a single CSS file that contains a generic and reusable styleguide theme. Since TWG Styleguide is simply a CSS file it makes no assumptions about your project's tech-stack, this means that you should easily be able to integrate the TWG Styleguide into any project. You can see an [example implementation](http://twg.github.io/styleguide/) of TWG Styleguide here.
 
 ##Installation
 
