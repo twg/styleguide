@@ -1,13 +1,17 @@
 {
-  "name": "test",
+  "name": "twg-styleguide",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "stylus --watch src/style.styl --out build/style.css"
-  },
-  "author": "",
+  "description": "A platform agnostic styleguide theme",
+  "main": "dist/style.css",
+  "author": "Mark Appleby",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twg/styleguide"
+  },
+  "scripts": {
+    "start": "stylus --watch src/style.styl --out dist/style.css"
+  },
   "devDependencies": {
     "stylus": "^0.53.0"
   }

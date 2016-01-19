@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+body {
+  margin: 0 !important;
+  padding: 20px 150px 20px 400px !important;
+  max-width: 1420px !important;
+  background: #fff !important;
+}
+@media (max-width: 1140px) {
+  body {
+    padding: 20px 60px 20px 310px !important;
+  }
+}
+@media (max-width: 970px) {
+  body {
+    padding: 20px 60px 20px 60px !important;
+  }
+}
+@media (max-width: 540px) {
+  body {
+    padding: 20px !important;
+  }
+}
+.-a {
+  text-decoration: none;
+  color: #07c;
+  transition: color 0.15s ease-in-out;
+}
+.-a:hover {
+  color: #0a5999;
+}
+.-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding-left: 30px;
+  padding-top: 30px;
+  width: 250px;
+  overflow-y: auto;
+  margin: 0;
+  list-style-type: none;
+}
+.-nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 12px 0;
+  font-size: 14px;
+  display: block;
+  transition: all 0.1s ease-in-out;
+}
+.-nav a:hover {
+  color: #0a5999;
+  padding-left: 2px;
+}
+.-nav a:first-child {
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+@media (max-width: 970px) {
+  .-nav {
+    display: none;
+  }
+}
+.-h1,
+.-h2,
+.-h3,
+.-h4,
+.-h5,
+.-h6 {
+  font-weight: bold;
+  color: #000 !important;
+  position: relative;
+  cursor: default;
+  display: block;
+  margin: 16px 0;
+  text-decoration: none;
+}
+.-h1:focus,
+.-h2:focus,
+.-h3:focus,
+.-h4:focus,
+.-h5:focus,
+.-h6:focus {
+  outline: none;
+}
+.-h1[href],
+.-h2[href],
+.-h3[href],
+.-h4[href],
+.-h5[href],
+.-h6[href] {
+  cursor: pointer;
+}
+.-h1[href]:before,
+.-h2[href]:before,
+.-h3[href]:before,
+.-h4[href]:before,
+.-h5[href]:before,
+.-h6[href]:before {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  padding-right: 0;
+  opacity: 0;
+  content: '# ';
+  transition: all 0.1s ease-in-out;
+}
+.-h1:hover:before,
+.-h2:hover:before,
+.-h3:hover:before,
+.-h4:hover:before,
+.-h5:hover:before,
+.-h6:hover:before {
+  padding-right: 3px;
+  opacity: 0.3;
+}
+.-h1 {
+  font-size: 36px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.-h2 {
+  font-size: 28px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.-h3 {
+  font-size: 24px;
+}
+.-h4 {
+  font-size: 20px;
+}
+.-h5 {
+  font-size: 16px;
+}
+.-h6 {
+  font-size: 16px;
+  color: #444 !important;
+}
+.-p,
+.-td,
+.-th {
+  line-height: 1.7;
+  color: #616161;
+  font-size: 16px;
+  margin: 1.2em 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.-section {
+  margin-bottom: 180px;
+}
+.-code,
+c {
+  background: #eee;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre;
+  padding: 0 6px;
+  display: inline-block;
+  margin: 0 3px;
+}
+xmp.-code,
+xmpc,
+pre.-code,
+prec,
+code.-code,
+codec {
+  padding: 0 10px;
+  display: block;
+  margin: 20px 0;
+}
+.-table {
+  display: table;
+  width: 100%;
+  margin: 20px 0;
+}
+.-tr {
+  display: table-row;
+}
+.-tr:first-child .-td {
+  padding-top: 0;
+}
+.-tr:last-child .-td {
+  border-bottom: 0;
+}
+.-td,
+.-th {
+  display: table-cell;
+  border-bottom: 1px solid rgba(238,238,238,0.5);
+  padding: 15px;
+  padding-left: 0;
+}
+.-td:first-child,
+.-th:first-child {
+  min-width: 160px;
+}
+.-th {
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .-table,
+  .-tr,
+  .-td {
+    display: block;
+    padding: 3px;
+    padding-left: 0;
+  }
+  .-td {
+    border-bottom: 0;
+  }
+  .-tr {
+    border-bottom: 1px solid rgba(238,238,238,0.5);
+  }
+  .-th {
+    display: none;
+  }
+}
+.-swatch {
+  display: inline-block;
+  width: 160px;
+  border-radius: 2px;
+  padding: 160px 10px 10px 10px;
+  font-size: 14px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  overflow: hidden;
+  font-weight: bold;
+  margin: 0 15px 15px 0;
+  transition: all 0.1s ease-in-out;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+.-swatch:hover {
+  box-shadow: 0 6px 6px rgba(0,0,0,0.1);
+}
+.-swatch:after {
+  height: 60px;
+  margin: -45px -10px -10px -10px;
+  content: '';
+  display: block;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
