@@ -147,6 +147,7 @@ sg-section
   display: inline-block
   margin: 0 3px
   overflow: auto
+  vertical-align: middle
   -webkit-overflow-scrolling: touch
   xmp&, pre&, code&
     font-size: 16px
@@ -195,21 +196,19 @@ sg-swatch
   font-family: typeface
   display: inline-block
   width: 135px
-  border-radius: 2px
-  padding: 160px 10px 10px 10px
   font-size: 14px
   box-shadow: 0 0 3px rgba(black, 0.2)
   overflow: hidden
   font-weight: bold
   margin: 0 15px 15px 0
+  padding: 8px
+  box-sizing: border-box
   transition: all 0.1s ease-in-out
   position: relative
+  border-top-width: 120px
+  border-top-style: solid
+  background: white
+  border-radius: 2px
+  vertical-align: top
   &:hover
     box-shadow: 0 6px 6px rgba(black, 0.1)
-  &:after
-    height: 60px
-    margin: -45px -10px -10px -10px
-    content: ''
-    display: block
-    background: white
-    border-top: 1px solid grey

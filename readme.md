@@ -37,4 +37,4 @@ TWG Styleguide is a single CSS file that contains a generic and reusable stylegu
 
 - `<sg-table>`: TWG Styleguide table formatting. `<sg-tr>`, `<sg-td>`, and `<sg-th>` elements are also available to be used in conjunction with `<sg-table>`.
 
-- `<sg-swatch>`: Format a colour swatch. Swatches require a background colour to be specified, this may done via a class or applied inline.
+- `<sg-swatch>`: Format a colour swatch. Swatches require a `border-color` to be specified, this may done via a class or applied inline.
