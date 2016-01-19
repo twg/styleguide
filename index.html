@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <div class="-nav">
+    <sg-nav>
       <div>
         <a href="#colours">Colours</a>
         <a href="#swatches">Swatches</a>
@@ -22,29 +22,41 @@
         <a href="#components">Components</a>
         <a href="#cards">Cards</a>
       </div>
-    </div>
+    </sg-nav>
 
-    <div class="-section">
-      <a href="#colours" class="-h1" name="colours">Colours</a>
-      <div class="-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias provident quae numquam, iure, obcaecati mollitia ullam reiciendis aut ea odio minus repellat nesciunt dignissimos consectetur voluptas fugit magnam quis.</div>
-      <a href="#swatches" class="-h2" name="swatches">Swatches</a>
+    <sg-section>
+      <a href="#colours" class="sg-h1" name="colours">Colours</a>
+      <sg-p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, fugiat dicta dolorum ab <c>repellendus;</c> debitis ex veritatis necessitatibus ratione est mollitia iusto velit minus vero dolores temporibus itaque, iure veniam!</sg-p>
+      <a href="#swatches" class="sg-h2" name="swatches">Swatches</a>
 
-      <div class="-swatch" style="background: #247BA0">Primary <br /> #247BA0</div>
+      <sg-swatch style="background: #247BA0">
+        Primary <br /> #247BA0
+      </sg-swatch>
 
-      <div class="-swatch" style="background: #70C1B3">Secondary <br /> #70C1B3</div>
+      <sg-swatch style="background: #70C1B3">
+        Secondary <br /> #70C1B3
+      </sg-swatch>
 
-      <div class="-swatch" style="background: #B2DBBF">Tertiary <br /> #B2DBBF</div>
+      <sg-swatch style="background: #B2DBBF">
+        Tertiary <br /> #B2DBBF
+      </sg-swatch>
 
-      <div class="-swatch" style="background: #F3FFBD">Success <br /> #F3FFBD</div>
+      <sg-swatch style="background: #F3FFBD">
+        Success <br /> #F3FFBD
+      </sg-swatch>
 
-      <div class="-swatch" style="background: #FC1654">Error <br /> #FC1654</div>
-    </div>
+      <sg-swatch style="background: #FC1654">
+        Error <br /> #FC1654
+      </sg-swatch>
+    </sg-section>
 
-    <div class="-section">
-      <a href="#typography" class="-h1" name="typography">Typography</a>
-      <div class="-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eveniet suscipit, est perspiciatis quaerat illo molestias nulla sapiente atque optio expedita maxime quis culpa, molestiae harum reprehenderit mollitia eaque laboriosam.</div>
+    <sg-section>
+      <a href="#typography" class="sg-h1" name="typography">Typography</a>
+      <sg-p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas corporis accusantium molestias. Excepturi qui earum modi debitis! Reprehenderit sequi magni, dolores rerum, deserunt, laudantium officiis quae obcaecati fugit eveniet natus!
+      </sg-p>
 
-      <a href="#headings" class="-h2" name="headings">Headings</a>
+      <a href="#headings" class="sg-h2" name="headings">Headings</a>
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
@@ -52,47 +64,53 @@
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
 
-      <a href="#typefaces" class="-h2" name="typefaces">Typefaces</a>
-      <div class="-p">All typefaces are currently hosted on <a class="-a" href="https://www.google.com/fonts">https://www.google.com/fonts</a>.</div>
+      <a href="#typefaces" class="sg-h2" name="typefaces">Typefaces</a>
+      <sg-p>All typefaces are currently hosted on <a class="sg-a" href="https://www.google.com/fonts">https://www.google.com/fonts</a>.</sg-p>
       <h1 class="lobster">Lobster</h1>
       <h1 class="josefin">Josefin Sans</h1>
-    </div>
+    </sg-section>
 
-    <div class="-section">
-      <a href="#components" class="-h1" name="components">Components</a>
+    <sg-section>
+      <a href="#components" class="sg-h1" name="components">Components</a>
 
-      <div class="-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa odit amet sit pariatur, tempore minus neque, veritatis quo, similique molestias impedit architecto minima eaque suscipit cumque ex expedita harum maxime.</div>
+      <sg-p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa odit amet sit pariatur, tempore minus neque, veritatis quo, similique molestias impedit architecto minima eaque suscipit cumque ex expedita harum maxime.</sg-p>
 
-      <div class="-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolores voluptatum pariatur culpa, repellat accusantium dolore asperiores, quas sunt quisquam sequi unde quis natus temporibus dolorum, distinctio eum. Ipsum, quod.</div>
+      <sg-p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolores voluptatum pariatur culpa, repellat accusantium dolore asperiores, quas sunt quisquam sequi unde quis natus temporibus dolorum, distinctio eum. Ipsum, quod.</sg-p>
 
-      <a href="#cards" class="-h2" name="cards">Cards</a>
-      <div class="-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, facilis, beatae magni inventore maiores quod nam error facere, aliquam dolorum voluptas labore mollitia dicta fugit assumenda voluptatem suscipit deserunt ipsam!</div>
+      <a href="#cards" class="sg-h2" name="cards">Cards</a>
+      <sg-p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, facilis, beatae magni inventore maiores quod nam error facere, aliquam dolorum voluptas labore mollitia dicta fugit assumenda voluptatem suscipit deserunt ipsam!</sg-p>
 
       <div class="card">
         <div class="card-header">Card Header</div>
         <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, non iure! Numquam, magnam. Ea eaque enim aut similique iure soluta minima perferendis magni illum maiores aperiam adipisci, quia fugit dolorem!</div>
       </div>
 
-      <div class="-table">
-        <div class="-tr">
-          <div class="-th">Attribute</div>
-          <div class="-th">Value</div>
-        </div>
-        <div class="-tr">
-          <div class="-td">
+      <sg-table>
+        <sg-tr>
+          <sg-th>Attribute</sg-th>
+          <sg-th>Value</sg-th>
+        </sg-tr>
+
+        <sg-tr>
+          <sg-td>
             <c>title</c>
-          </div>
-          <div class="-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae unde maiores hic, magni accusamus eum. Veritatis quod amet pariatur labore magnam delectus minima ratione aliquam mollitia quas nemo, repudiandae similique.</div>
-        </div>
-        <div class="-tr">
-          <div class="-td">
+          </sg-td>
+          <sg-td>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae unde maiores hic, magni accusamus eum. Veritatis quod amet pariatur labore magnam delectus minima ratione aliquam mollitia quas nemo, repudiandae similique.
+          </sg-td>
+        </sg-tr>
+
+        <sg-tr>
+          <sg-td>
             <c>content</c>
-          </div>
-          <div class="-td">
+          </sg-td>
+          <sg-td>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ducimus ipsam odio at iusto dicta in blanditiis, exercitationem, veniam cupiditate alias optio illo cumque. Natus aliquam, voluptas nemo corporis quia!
-          </div>
-        </div>
-      </div>
-    </div>
+          </sg-td>
+        </sg-tr>
+      </sg-table>
+
+    </sg-section>
+
   </body>
 </html>

@@ -26,24 +26,23 @@ body
   @media (max-width: 540px)
     padding: 20px !important
 
-*[class^='-'], *[class*=' -']
-  font-family: typeface
-
-.-a
+sg-a, .sg-a
   text-decoration: none
+  font-family: typeface
   color: link
   transition: color 0.15s ease-in-out
   &:hover
     color: link-hover
 
-.-nav, sg-nav
+sg-nav
+  font-family: typeface
   position: fixed
   top: 0
   left: 0
   bottom: 0
   padding-left: 30px
   padding-top: 30px
-  width: nav-width
+  width: nav-width - 30px
   overflow-y: auto
   margin: 0
   list-style-type: none
@@ -64,8 +63,10 @@ body
   @media (max-width: 970px)
     display: none
 
-.-h1, .-h2, .-h3, .-h4, .-h5, .-h6
+sg-h1, sg-h2, sg-h3, sg-h4, sg-h5, sg-h6,
+.sg-h1, .sg-h2, .sg-h3, .sg-h4, .sg-h5, .sg-h6
   font-weight: bold
+  font-family: typeface
   color: black !important
   position: relative
   cursor: default
@@ -88,39 +89,44 @@ body
     padding-right: 3px
     opacity: 0.3
 
-.-h1
+sg-h1, .sg-h1
   font-size: 36px
   border-bottom: 1px solid grey
   padding-bottom: 10px
 
-.-h2
+sg-h2, .sg-h2
   font-size: 28px
   border-bottom: 1px solid grey
   padding-bottom: 10px
 
-.-h3
+sg-h3, .sg-h3
   font-size: 24px
 
-.-h4
+sg-h4, .sg-h4
   font-size: 20px
 
-.-h5
+sg-h5, .sg-h5
   font-size: 16px
 
-.-h6
+sg-h6, .sg-h6
   font-size: 16px
   color: #444 !important
 
-.-p
+sg-p
+  font-family: typeface
   line-height: 1.7
   color: offblack
+  display: block
   font-size: 16px
   margin: 1.2em 0
 
-.-section
+sg-section
+  display: block
   margin-bottom: 180px
+  @media (max-width: 400px)
+    margin-bottom: 60px
 
-.-code, c
+sg-code, c
   background: grey
   border-radius: 3px
   font-family: monospace
@@ -134,20 +140,20 @@ body
     display: block
     margin: 20px 0
 
-.-table
+sg-table
   display: table
   width: 100%
   margin: 20px 0
 
-.-tr
+sg-tr
   display: table-row
   &:first-child .-td
     padding-top: 0
   &:last-child .-td
     border-bottom: 0
 
-.-td
-  @extend .-p
+sg-td
+  @extend sg-p
   display: table-cell
   border-bottom: 1px solid rgba(grey, 0.5)
   padding: 15px
@@ -155,23 +161,23 @@ body
   &:first-child
     min-width: 160px
 
-.-th
-  @extend .-td
+sg-th
+  @extend sg-td
   font-weight: bold
 
 @media (max-width: 600px)
-  .-table, .-tr, .-td
+  sg-table, sg-tr, sg-td
     display: block
     padding: 3px
     padding-left: 0
-  .-td
+  sg-td
     border-bottom: 0
-  .-tr
+  sg-tr
     border-bottom: 1px solid rgba(grey, 0.5)
-  .-th
+  sg-th
     display: none
 
-.-swatch
+sg-swatch
   font-family: typeface
   display: inline-block
   width: 135px

@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster|Josefin+Sans);
 
+body {
+  font-family: 'Lobster', cursive;
+}
+
 .lobster {
   font-family: 'Lobster', cursive;
   color: grey;
