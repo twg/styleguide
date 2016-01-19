@@ -20,6 +20,10 @@ body {
     padding: 20px !important;
   }
 }
+*[class^='-'],
+*[class*=' -'] {
+  font-family: 'Open Sans', sans-serif;
+}
 .-a {
   text-decoration: none;
   color: #07c;
@@ -28,7 +32,8 @@ body {
 .-a:hover {
   color: #0a5999;
 }
-.-nav {
+.-nav,
+sg-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -40,7 +45,8 @@ body {
   margin: 0;
   list-style-type: none;
 }
-.-nav a {
+.-nav a,
+sg-nav a {
   text-decoration: none;
   color: #000;
   padding: 12px 0;
@@ -48,17 +54,20 @@ body {
   display: block;
   transition: all 0.1s ease-in-out;
 }
-.-nav a:hover {
+.-nav a:hover,
+sg-nav a:hover {
   color: #0a5999;
   padding-left: 2px;
 }
-.-nav a:first-child {
+.-nav a:first-child,
+sg-nav a:first-child {
   font-weight: bold;
   font-size: 16px;
   border-bottom: 1px solid #eee;
 }
 @media (max-width: 970px) {
-  .-nav {
+  .-nav,
+  sg-nav {
     display: none;
   }
 }
@@ -145,7 +154,6 @@ body {
   color: #616161;
   font-size: 16px;
   margin: 1.2em 0;
-  font-family: 'Open Sans', sans-serif;
 }
 .-section {
   margin-bottom: 180px;
@@ -218,8 +226,9 @@ codec {
   }
 }
 .-swatch {
+  font-family: 'Open Sans', sans-serif;
   display: inline-block;
-  width: 160px;
+  width: 135px;
   border-radius: 2px;
   padding: 160px 10px 10px 10px;
   font-size: 14px;
@@ -228,7 +237,6 @@ codec {
   font-weight: bold;
   margin: 0 15px 15px 0;
   transition: all 0.1s ease-in-out;
-  font-family: 'Open Sans', sans-serif;
   position: relative;
 }
 .-swatch:hover {

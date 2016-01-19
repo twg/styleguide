@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster|Josefin+Sans);
+
+.lobster {
+  font-family: 'Lobster', cursive;
+  color: grey;
+}
+
+.josefin {
+  font-family: 'Josefin Sans', sans-serif;
+  color: grey;
+}
+
+h1, h3 {
+  color: #247BA0;
+}
+
+h2 {
+  color: #B2DBBF;
+}
+
+.card {
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #247BA0;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 20px;
+}
