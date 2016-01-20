@@ -132,6 +132,7 @@ sg-section
 
 .sg-code, c
   background: grey
+  color: black
   border-radius: 3px
   font-family: monospace
   font-size: 14px
@@ -211,14 +212,20 @@ sg-swatch
 
 sg-logo
   display: inline-block
-  padding: 30px
   background: #f5f5f5
   border-radius: 50%
   height: logo-size
   width: logo-size
   box-sizing: border-box
   margin-bottom: 15px
+  &:before
+    content: ''
+    display: inline-block
+    width: 0
+    height: 100%
+    vertical-align: middle
   img
     max-width: 100%
+    width: logo-size - 40px
     display: inline-block
-    transform: translateY(60%)
+    vertical-align: middle
