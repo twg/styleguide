@@ -8,6 +8,7 @@ nav-width = 200px
 body-inset = 150px
 condensed-body-inset = 60px
 logo-size = 150px
+rad = 3px
 
 // colours
 grey = #eee
@@ -133,7 +134,7 @@ sg-section
 .sg-code, c
   background: grey
   color: black
-  border-radius: 3px
+  border-radius: rad
   font-family: monospace
   font-size: 14px
   white-space: pre
@@ -202,7 +203,7 @@ sg-swatch
   border-top-width: 120px
   border-top-style: solid
   background: white
-  border-radius: 2px
+  border-radius: rad
   vertical-align: top
   @media (max-width: 500px)
     width: 100%
@@ -229,3 +230,21 @@ sg-logo
     width: logo-size - 40px
     display: inline-block
     vertical-align: middle
+
+sg-example
+  display: block
+  padding: 25px
+  padding-top: 35px
+  margin: 35px 0
+  border: 1px solid grey
+  border-radius: rad
+  position: relative
+  &:before
+    content: 'example'
+    text-transform: uppercase
+    position: absolute
+    top: 0
+    right: 0
+    background: grey
+    font-size: 10px
+    padding: 5px 10px

@@ -62,7 +62,9 @@ In general, TWG Styleguide names are identical to existing HTML element names bu
 
 - `<sg-table>`: TWG Styleguide table formatting. `<sg-tr>`, `<sg-td>`, and `<sg-th>` elements are also available to be used in conjunction with `<sg-table>`.
 
-- `<sg-swatch>`: Format a colour swatch. Swatches require a `border-color` to be specified, this may done via a class or applied inline.
+- `<sg-example>`: Use this element to clearly indicate when you are showcasing an example style or component.
+
+- `<sg-swatch>`: Use this element to display a colour swatch. Swatches require a `border-color` to be specified, this may done via a class or applied as an inline style.
 
 - `<sg-logo>`: Format a logo to sit in the navigation.
 
