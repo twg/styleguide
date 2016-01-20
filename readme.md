@@ -54,7 +54,7 @@ In general, TWG Styleguide names are identical to existing HTML element names bu
 
 - `<sg-section>`: TWG Styleguide section formatting.
 
-- `<sg-h1>` - `<sg-h6>`: Styleguide heading styles. These can also be applied as classes with the same name, for example `.sg-h3`. If anchor tags have both a styleguide heading class (ex. `.sg-h1` - `.sg-h6`) and an `href` attribute, they will automatically get an animated hover state.
+- `<sg-h1>` - `<sg-h6>`: Styleguide heading styles. Note - these styles are also available as classes, see `.sg-h1` - `.sg-h6` below.
 
 - `<sg-p>`: TWG Styleguide paragraph formatting.
 
@@ -64,13 +64,15 @@ In general, TWG Styleguide names are identical to existing HTML element names bu
 
 - `<sg-swatch>`: Use this element to display a colour swatch. Swatches require a `border-color` to be specified, this may done via a class or applied as an inline style.
 
-- `<sg-code>`: To share a block of non-HTML code, wrap the code in this element (ex. `<sg-code>...</sg-code>`). Note - if using Jade, you can use the [Block in a Tag](http://jade-lang.com/reference/plain-text/) method for multiline code blocks.
+- `<sg-code>`: To share a block of non-HTML code, wrap the code in this element (ex. `<sg-code>...</sg-code>`). Note - if using Jade, you can use the [Block in a Tag](http://jade-lang.com/reference/plain-text/) method for multiline code blocks. If you'd like to share a block of HTML code see the `.sg-code` class definition below.
 
 - `<c>`: To share inline code samples use `<c>...</c>`. This renders similarly to the backtick character in GitHub comments. For the sake of brevity, this is the **only** TWG Styleguide name that does not contain the `sg-` prefix.
 
 #### Classes
 
-- `.sg-a`: Apply TWG Styleguide anchor style formatting. As anchor elements have inherit functionality that we want to maintain, TWG Styleguide uses a class here instead of a custom element.
+- `.sg-a`: Apply TWG Styleguide anchor style formatting. Since anchor elements have inherit functionality that we want to maintain, TWG Styleguide uses a class here instead of a custom element.
+
+- `.sg-h1` - `.sg-h6`: TWG Styleguide heading styles. If anchor tags have both a styleguide heading class (ex. `.sg-h1` - `.sg-h6`) and an `href` attribute, they will automatically get an animated hover state. Note - these headings are also available as elements, see `<sg-h1>` - `<sg-h6>` above.
 
 - `.sg-code`: To share blocks of **HTML code** use `<xmp class="sg-code">...</xmp>` (though be aware that the `<xmp>` element [is deprecated](https://developer.mozilla.org/en/docs/Web/HTML/Element/xmp)). Note - if you're sharing non-HTML code use the `<sg-code>` element instead (see above).
 
