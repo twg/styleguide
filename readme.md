@@ -32,13 +32,25 @@ Note - the concern with this method is one: GitHub Pages isn't really meant to a
 1. You may need to manually hide certain elements on the styleguide page. For instance, if your site has a fixed navigation, you may need/want to hide that on the styleguide page.
 1. Follow the Custom Elements documentation below to implement the custom TWG Styleguide elements.
 
+###Integrating with a Front-end Application Framework (Angular, React, Ember)
+
+If you're integrating TWG Styleguide with a front-end application framework, you may run into an issue with the in-page anchor links in the nav not working as expected.
+
+This is caused by the fact that many SPAs (singe page applications) already use a hash to manage the routing (for example `http://example.com/#/about`). So when you try to use an in-page anchor with TWG Styleguide the URL ends up looking something like `http://example.com/#/styleguide#headings`. Since it contains two `#`'s it is invalid and may result in unexpected behavior. There are various ways to fix this depending on which front-end application framework your project is using. For instance, if your project is using AngularJS, see this tutorial on [Pretty URLs](https://scotch.io/quick-tips/pretty-urls-in-angularjs-removing-the-hashtag) to resolve the issue.
+
 ##Custom Elements
+
+Since the `styleguide.css` file will sit alongside any project specific CSS files you have, TWG Styleguide has to go out of its way to ensure that there are not going to be naming conflicts between the two. We do not want your project styles to interfere with the styleguide styles and we do not want the styleguide styles to interfere with your project styles.
+
+To help ensure there are no namespace conflicts, all TWG Styleguide names are prefixed with `sg-` for StyleGuide. To further ensure there are no conflicts, most TWG Styleguide styles are applied via custom elements rather than custom classes.
+
+In general, TWG Styleguide names are identical to existing HTML element names but simply have the `sg-` prefix. For example `<sg-p>` instead of `<p>`. The following is a list of all of the classes and elements that TWG Styleguide provides:
 
 - `<sg-nav>`: The fixed navigation element. If you would like to create sections within the nav, simply group links in a surrounding element such as a `<div>`. The first link in each group will be formatted as a nav group title.
 
-- `<sg-a>`: Anchor style formatting. Can also be applied via the class `.sg-a`.
+- `.sg-a`: Anchor style formatting. As anchor element have inherit functionality that we want to maintain, TWG Styleguide uses a class here instead of a custom element.
 
-- `<sg-h1>` - `<sg-h6>`: Styleguide heading styles. These can also be applied as classes with the same name, for example `.sg-h3`. If anchor tags have both a styleguide heading class (`.sg-h1` - `.sg-h6`) and and `href` attribute, they will automatically get an animated hover state.
+- `<sg-h1>` - `<sg-h6>`: Styleguide heading styles. These can also be applied as classes with the same name, for example `.sg-h3`. If anchor tags have both a styleguide heading class (ex. `.sg-h1` - `.sg-h6`) and an `href` attribute, they will automatically get an animated hover state.
 
 - `<sg-p>`: TWG Styleguide paragraph formatting.
 
@@ -52,9 +64,9 @@ Note - the concern with this method is one: GitHub Pages isn't really meant to a
 
 - `<sg-logo>`: Format a logo to sit in the navigation.
 
-##Development
+##Contributing to TWG Styleguide
 
-If you would like to contribute to the development of the TWG Styleguide itself, follow these steps:
+If you would like to contribute to the development of the TWG Styleguide itself, please follow these steps:
 
 1. clone this repo: `git clone https://github.com/twg/styleguide.git`
 1. checkout a new branch: `git checkout -b YOUR_BRANCH_NAME_HERE`
