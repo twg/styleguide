@@ -131,7 +131,7 @@ sg-section
   @media (max-width: 400px)
     margin-bottom: 60px
 
-.sg-code, c
+c, sg-code, .sg-code
   background: grey
   color: black
   border-radius: rad
@@ -144,11 +144,13 @@ sg-section
   overflow: auto
   vertical-align: middle
   -webkit-overflow-scrolling: touch
-  xmp&, pre&, code&
-    font-size: 16px
-    padding: 0 10px
-    display: block
-    margin: 20px 0
+
+sg-code, xmp.sg-code
+  white-space: pre
+  font-size: 16px
+  padding: 15px
+  display: block
+  margin: 20px 0
 
 sg-table
   display: table

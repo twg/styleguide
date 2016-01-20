@@ -38,7 +38,7 @@ If you're integrating TWG Styleguide with a front-end application framework, you
 
 This is caused by the fact that many SPAs (singe page applications) already use a hash to manage the routing (for example `http://example.com/#/about`). So when you try to use an in-page anchor with TWG Styleguide the URL ends up looking something like `http://example.com/#/styleguide#headings`. Since it contains two `#`'s it is invalid and may result in unexpected behavior. There are various ways to fix this depending on which front-end application framework your project is using. For instance, if your project is using AngularJS, see this tutorial on [Pretty URLs](https://scotch.io/quick-tips/pretty-urls-in-angularjs-removing-the-hashtag) to resolve the issue.
 
-##Custom Elements
+##Custom Elements & Classes
 
 Since the `styleguide.css` file will sit alongside any project specific CSS files you have, TWG Styleguide has to go out of its way to ensure that there are not going to be naming conflicts between the two. We do not want your project styles to interfere with the styleguide styles and we do not want the styleguide styles to interfere with your project styles.
 
@@ -46,27 +46,33 @@ To help ensure there are no namespace conflicts, all TWG Styleguide names are pr
 
 In general, TWG Styleguide names are identical to existing HTML element names but simply have the `sg-` prefix. For example `<sg-p>` instead of `<p>`. The following is a list of all of the classes and elements that TWG Styleguide provides:
 
+#### Custom Elements
+
 - `<sg-nav>`: The fixed navigation element. If you would like to create sections within the nav, simply group links in a surrounding element such as a `<div>`. The first link in each group will be formatted as a nav group title.
 
-- `.sg-a`: Anchor style formatting. As anchor element have inherit functionality that we want to maintain, TWG Styleguide uses a class here instead of a custom element.
+- `<sg-logo>`: Format a logo to sit in the navigation.
+
+- `<sg-section>`: TWG Styleguide section formatting.
 
 - `<sg-h1>` - `<sg-h6>`: Styleguide heading styles. These can also be applied as classes with the same name, for example `.sg-h3`. If anchor tags have both a styleguide heading class (ex. `.sg-h1` - `.sg-h6`) and an `href` attribute, they will automatically get an animated hover state.
 
 - `<sg-p>`: TWG Styleguide paragraph formatting.
 
-- `<sg-section>`: TWG Styleguide section formatting.
-
-- `.sg-code`: To share blocks of non-HTML code, use `<pre class="sg-code"><code>...</code></pre>`. To share blocks of HTML code use `<xmp class="sg-code">...</xmp>` (though be aware that the `<xmp>` element [is deprecated](https://developer.mozilla.org/en/docs/Web/HTML/Element/xmp)). Note - if using Jade, you can use the [Block in a Tag](http://jade-lang.com/reference/plain-text/) method for multiline code samples.
-
-- `<c>`: To share blocks of inline code use `<c>...</c>`. This works and displays similarly to the backtick character in GitHub comments. For the sake of brevity, this is the **only** TWG Styleguide name that does not contain the `sg-` prefix.
+- `<sg-example>`: Use this element to clearly indicate when you are showcasing an example style or component.
 
 - `<sg-table>`: TWG Styleguide table formatting. `<sg-tr>`, `<sg-td>`, and `<sg-th>` elements are also available to be used in conjunction with `<sg-table>`.
 
-- `<sg-example>`: Use this element to clearly indicate when you are showcasing an example style or component.
-
 - `<sg-swatch>`: Use this element to display a colour swatch. Swatches require a `border-color` to be specified, this may done via a class or applied as an inline style.
 
-- `<sg-logo>`: Format a logo to sit in the navigation.
+- `<sg-code>`: To share a block of non-HTML code, wrap the code in this element (ex. `<sg-code>...</sg-code>`). Note - if using Jade, you can use the [Block in a Tag](http://jade-lang.com/reference/plain-text/) method for multiline code blocks.
+
+- `<c>`: To share inline code samples use `<c>...</c>`. This renders similarly to the backtick character in GitHub comments. For the sake of brevity, this is the **only** TWG Styleguide name that does not contain the `sg-` prefix.
+
+#### Classes
+
+- `.sg-a`: Apply TWG Styleguide anchor style formatting. As anchor elements have inherit functionality that we want to maintain, TWG Styleguide uses a class here instead of a custom element.
+
+- `.sg-code`: To share blocks of **HTML code** use `<xmp class="sg-code">...</xmp>` (though be aware that the `<xmp>` element [is deprecated](https://developer.mozilla.org/en/docs/Web/HTML/Element/xmp)). Note - if you're sharing non-HTML code use the `<sg-code>` element instead (see above).
 
 ##Contributing to TWG Styleguide
 
