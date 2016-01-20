@@ -56,7 +56,9 @@ In general, TWG Styleguide names are identical to existing HTML element names bu
 
 - `<sg-section>`: TWG Styleguide section formatting.
 
-- `.sg-code`: TWG Styleguide code block formatting. There is also the shortform element `<c></c>` that will apply the same code formatting (you can think of this as the backtick character in GitHub's markdown parser). If you would like to present a block of code, use the `<xmp>` element with the class of `.sg-code`: `<xmp class="sg-code"></xmp>`. Note - if using Jade, you can use the [Block in a Tag](http://jade-lang.com/reference/plain-text/) method for multiline code samples.
+- `.sg-code`: To share blocks of non-HTML code, use `<pre class="sg-code"><code>...</code></pre>`. To share blocks of HTML code use `<xmp class="sg-code">...</xmp>` (though be aware that the `<xmp>` element [is deprecated](https://developer.mozilla.org/en/docs/Web/HTML/Element/xmp)). Note - if using Jade, you can use the [Block in a Tag](http://jade-lang.com/reference/plain-text/) method for multiline code samples.
+
+- `<c>`: To share blocks of inline code use `<c>...</c>`. This works and displays similarly to the backtick character in GitHub comments. For the sake of brevity, this is the **only** TWG Styleguide name that does not contain the `sg-` prefix.
 
 - `<sg-table>`: TWG Styleguide table formatting. `<sg-tr>`, `<sg-td>`, and `<sg-th>` elements are also available to be used in conjunction with `<sg-table>`.
 
