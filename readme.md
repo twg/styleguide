@@ -14,12 +14,23 @@ TWG Styleguide is a single CSS file that contains a generic and reusable stylegu
 
 ##Installation
 
-1. Run `npm install twg-styleguide --save` OR use `http://twg.github.io/styleguide/dist/styleguide.css` OR save [styleguide.css](https://raw.githubusercontent.com/twg/styleguide/gh-pages/dist/styleguide.css?token=ABTA4SoAxTlsCHPTAutHBnNbYcJQEYYaks5Wp9htwA%3D%3D) to your project
+###Method One: Quick & Dirty
+
+1. Create a new page for your styleguide (the specific method for creating a new page will vary by project).
+1. Add `<link rel="stylesheet" href="http://twg.github.io/styleguide/dist/styleguide.css">` to the top of your new page.
+1. You may need to manually hide certain elements on the styleguide page. For instance, if your site has a fixed navigation, you may need/want to hide that on the styleguide page.
+1. Follow the Custom Elements documentation below to implement the custom TWG Styleguide elements.
+
+Note - the concern with this method is one: GitHub Pages isn't really meant to act as a CDN so the repercussions of using it as such are unclear and two: this file is liable to change at any point in the future (as TWG Styleguide is improved) thus, your styleguide may potentially look broken in the future.
+
+###Method Two: Traditional
+
+1. Run `npm install twg-styleguide --save`
 1. Ensure `styleguide.css` is available to your project. For example, you might need to create a gulp task to copy `node_modules/twg-styleguide/dist/styleguide.css` into your project's build directory.
 1. Create a new page for your styleguide (the specific method for creating a new page will vary by project).
 1. Link to the `styleguide.css` stylesheet on your new styleguide page.
 1. You may need to manually hide certain elements on the styleguide page. For instance, if your site has a fixed navigation, you may need/want to hide that on the styleguide page.
-1. Follow the reference below to implement the custom TWG Styleguide elements.
+1. Follow the Custom Elements documentation below to implement the custom TWG Styleguide elements.
 
 ##Custom Elements
 
@@ -40,3 +51,13 @@ TWG Styleguide is a single CSS file that contains a generic and reusable stylegu
 - `<sg-swatch>`: Format a colour swatch. Swatches require a `border-color` to be specified, this may done via a class or applied inline.
 
 - `<sg-logo>`: Format a logo to sit in the navigation.
+
+##Development
+
+If you would like to contribute to the development of the TWG Styleguide itself, follow these steps:
+
+1. clone this repo: `git clone https://github.com/twg/styleguide.git`
+1. checkout a new branch: `git checkout -b YOUR_BRANCH_NAME_HERE`
+1. install the dependencies: `npm install`
+1. start the dev tasks: `npm start`
+1. commit and push your changes when done and submit a PR on GitHub
