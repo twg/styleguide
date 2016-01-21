@@ -64,7 +64,7 @@ In general, TWG Styleguide names are identical to existing HTML element names bu
 
 - `<sg-swatch>`: Use this element to display a colour swatch. Swatches require a `border-color` to be specified, this may done via a class or applied as an inline style.
 
-- `<sg-code>`: To share a block of non-HTML code, wrap the code in this element (ex. `<sg-code>...</sg-code>`). Note - if using Jade, you can use the [Block in a Tag](http://jade-lang.com/reference/plain-text/) method for multiline code blocks. If you'd like to share a block of HTML code see the `.sg-code` class definition below.
+- `<sg-code>`: To share a block of **non-HTML code**, wrap the code in this element (ex. `<sg-code>...</sg-code>`). Note - if using Jade, you can use the [Block in a Tag](http://jade-lang.com/reference/plain-text/) method for multiline code blocks. If you'd like to share a block of HTML code see the `.sg-code` class definition below.
 
 - `<c>`: To share inline code samples use `<c>...</c>`. This renders similarly to the backtick character in GitHub comments. For the sake of brevity, this is the **only** TWG Styleguide name that does not contain the `sg-` prefix.
 
