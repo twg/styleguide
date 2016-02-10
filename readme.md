@@ -29,6 +29,7 @@ Note - the concern with this method is one: GitHub Pages isn't really meant to a
 1. Ensure `styleguide.css` is available to your project. For example, you might need to create a gulp task to copy `node_modules/twg-styleguide/dist/styleguide.css` into your project's build directory.
 1. Create a new page for your styleguide (the specific method for creating a new page will vary by project).
 1. Link to the `styleguide.css` stylesheet on your new styleguide page.
+1. Add the `sg-body` class to the `body` element of the styleguide page.
 1. You may need to manually hide certain elements on the styleguide page. For instance, if your site has a fixed navigation, you may need/want to hide that on the styleguide page.
 1. Follow the Custom Elements documentation below to implement the custom TWG Styleguide elements.
 
@@ -69,6 +70,8 @@ In general, TWG Styleguide names are identical to existing HTML element names bu
 - `<c>`: To share inline code samples use `<c>...</c>`. This renders similarly to the backtick character in GitHub comments. For the sake of brevity, this is the **only** TWG Styleguide name that does not contain the `sg-` prefix.
 
 #### Classes
+
+- `.sg-body`: Apply this class to the `body` element to allow the styleguide to add the necessary padding values.
 
 - `.sg-a`: Apply TWG Styleguide anchor style formatting. Since anchor elements have inherit functionality that we want to maintain, TWG Styleguide uses a class here instead of a custom element.
 
