@@ -79,6 +79,51 @@ In general, TWG Styleguide names are identical to existing HTML element names bu
 
 - `.sg-code`: To share blocks of **HTML code** use `<xmp class="sg-code">...</xmp>` (though be aware that the `<xmp>` element [is deprecated](https://developer.mozilla.org/en/docs/Web/HTML/Element/xmp)). Note - if you're sharing non-HTML code use the `<sg-code>` element instead (see above).
 
+##Dynamic Navigation
+
+If you would like to dynamically create the styleguide navigation you can implement the follow JavaScript into your project:
+
+```
+var nav, target
+nav = document.querySelectorAll('sg-nav')[0];
+
+allHeadings(function (heading) {
+  if (heading.primary) createWrapper();
+  var link = createLink(heading);
+  if (target) {
+    target.appendChild(link);
+  } else {
+    nav.appendChild(link);
+  }
+})
+
+function allHeadings (cb) {
+  var headings = document.querySelectorAll('.sg-h1, .sg-h2');
+  for(var index = 0; index < headings.length; index++) {
+    var heading = headings[index];
+    if (needsWrapper(heading)) heading.primary = true;
+    cb(heading);
+  }
+}
+
+function createLink (heading) {
+  var link = document.createElement('a');
+  link.text = heading.text
+  link.href = heading.hash
+  return link
+}
+
+function needsWrapper (heading) {
+  return heading.className.indexOf('sg-h1') > -1;
+}
+
+function createWrapper () {
+  var div = document.createElement('div');
+  nav.appendChild(div);
+  target = div
+}
+```
+
 ##Contributing to TWG Styleguide
 
 If you would like to contribute to the development of the TWG Styleguide itself, please follow these steps:
