@@ -1,70 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Character encoding for Unicode -->
     <meta charset="utf-8">
+
+    <!-- This title appears in the browser's tab and when the site is bookmarked -->
+    <title>Project Styleguide</title>
+
+    <!-- Ensure the site scales appropriately for smaller screens -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TWG Styleguide Example</title>
-    <link rel="stylesheet" href="example/example.css" media="screen" charset="utf-8">
+
+    <!-- Include the project's styles -->
+    <link rel="stylesheet" href="project/styles.css" media="screen" charset="utf-8">
+
+    <!-- Include the styles specific to the styleguide itself -->
     <link rel="stylesheet" href="dist/styleguide.css" media="screen" charset="utf-8">
   </head>
   <body class="sg-body">
 
+    <!-- Styleguide navigation -->
     <sg-nav>
-      <sg-logo>
-        <img src="http://www.revealnews.org/wp-content/uploads/2015/03/TWG-Logo-Revised-Large-11.png" alt="logo">
-      </sg-logo>
-      <div>
-        <a href="#colours">Colours</a>
-        <a href="#swatches">Swatches</a>
-      </div>
-      <div>
-        <a href="#typography">Typography</a>
-        <a href="#headings">Headings</a>
-        <a href="#typefaces">Typefaces</a>
-      </div>
-      <div>
-        <a href="#components">Components</a>
-        <a href="#cards">Cards</a>
-      </div>
+      <sg-logo><img src="project/logo.png" alt="logo"></sg-logo>
     </sg-nav>
 
+    <!-- ================== Colour Scheme ================== -->
     <sg-section>
-      <a href="#colours" class="sg-h1" id="colours">Colours</a>
-      <sg-p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, fugiat dicta dolorum ab <c>repellendus;</c> debitis ex veritatis necessitatibus ratione est mollitia iusto velit minus vero dolores temporibus itaque, iure veniam!</sg-p>
-      <a href="#swatches" class="sg-h2" id="swatches">Swatches</a>
+      <a href="#colours" class="sg-h1" id="colours"> Colours </a>
 
-      <sg-swatch style="border-color: #247BA0">
-        Primary <br /> Colour <br /> #247BA0
-      </sg-swatch>
+      <a href="#brand-colours" class="sg-h3" id="brand-colours"> Brand Colours </a>
+      <sg-swatch style="border-color: #2185C5"> Primary </sg-swatch>
+      <sg-swatch style="border-color: #7ECEFD"> Secondary </sg-swatch>
+      <sg-swatch style="border-color: #FFF6E5"> Tertiary </sg-swatch>
 
-      <sg-swatch style="border-color: #70C1B3">
-        Secondary <br /> #70C1B3
-      </sg-swatch>
+      <a href="#status-colours" class="sg-h3" id="status-colours"> Status Colours </a>
+      <sg-swatch style="border-color: #97C475"> Success </sg-swatch>
+      <sg-swatch style="border-color: #F8B34C"> Warning </sg-swatch>
+      <sg-swatch style="border-color: #D33535"> Error </sg-swatch>
+      <sg-swatch style="border-color: #7ECEFD"> Notice </sg-swatch>
 
-      <sg-swatch style="border-color: #B2DBBF">
-        Tertiary <br /> #B2DBBF
-      </sg-swatch>
-
-      <sg-swatch style="border-color: #F3FFBD">
-        Success <br /> #F3FFBD
-      </sg-swatch>
-
-      <sg-swatch style="border-color: #FC1654">
-        Error <br /> #FC1654
-      </sg-swatch>
-
-      <sg-swatch style="border-color: #CCCCCC">
-        Grey <br /> #CCCCCC
-      </sg-swatch>
+      <a href="#shades" class="sg-h3" id="shades"> Shades </a>
+      <sg-swatch style="border-color: #EAEAEA"> Light </sg-swatch>
+      <sg-swatch style="border-color: #C3C3C3"> Medium </sg-swatch>
+      <sg-swatch style="border-color: #9A9A9A"> Dark </sg-swatch>
     </sg-section>
 
+    <!-- ================== Headings ================== -->
     <sg-section>
-      <a href="#typography" class="sg-h1" id="typography">Typography</a>
-      <sg-p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas corporis accusantium molestias. Excepturi qui earum modi debitis! Reprehenderit sequi magni, dolores rerum, deserunt, laudantium officiis quae obcaecati fugit eveniet natus!
-      </sg-p>
+      <a href="#typography" class="sg-h1" id="typography"> Typography </a>
 
-      <a href="#headings" class="sg-h2" id="headings">Headings</a>
+      <a href="#headings" class="sg-h3" id="headings"> Headings </a>
       <sg-example>
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -74,86 +58,220 @@
         <h6>Heading 6</h6>
       </sg-example>
 
-      <a href="#typefaces" class="sg-h2" id="typefaces">Typefaces</a>
-      <sg-p>All typefaces are currently hosted on <a class="sg-a" href="https://www.google.com/fonts">https://www.google.com/fonts</a>.</sg-p>
+      <a href="#paragraphs" class="sg-h3" id="paragraphs"> Paragraphs </a>
       <sg-example>
-        <h1 class="lobster">Lobster</h1>
-        <h1 class="josefin">Josefin Sans</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque provident saepe eius doloremque pariatur laudantium optio incidunt dolorem, eligendi reprehenderit dolorum sunt ducimus, porro officiis nemo, debitis maxime et facere?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque provident saepe eius doloremque pariatur laudantium optio incidunt dolorem, eligendi reprehenderit dolorum sunt ducimus, porro officiis nemo, debitis maxime et facere?</p>
+      </sg-example>
+
+      <a href="#blockquotes" class="sg-h3" id="blockquotes"> Blockquotes </a>
+      <sg-example>
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur inventore libero quaerat accusantium voluptas laboriosam quibusdam, molestias, magnam deserunt magni doloribus ut placeat autem ullam est odit tenetur aperiam esse.</blockquote>
       </sg-example>
     </sg-section>
 
+    <!-- ================== Lists ================== -->
     <sg-section>
-      <a href="#components" class="sg-h1" id="components">Components</a>
+      <a href="#lists" class="sg-h1" id="lists"> Lists </a>
 
-      <sg-p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa odit amet sit pariatur, tempore minus neque, veritatis quo, similique molestias impedit architecto minima eaque suscipit cumque ex expedita harum maxime.</sg-p>
-
-      <sg-p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolores voluptatum pariatur culpa, repellat accusantium dolore asperiores, quas sunt quisquam sequi unde quis natus temporibus dolorum, distinctio eum. Ipsum, quod.</sg-p>
-
-      <a href="#cards" class="sg-h2" id="cards">Cards</a>
-      <sg-p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, facilis, beatae magni inventore maiores quod nam error facere, aliquam dolorum voluptas labore mollitia dicta fugit assumenda voluptatem suscipit deserunt ipsam!</sg-p>
-
+      <a href="#unordered-list" class="sg-h3" id="unordered-list"> Unordered List </a>
       <sg-example>
-        <div class="card">
-          <div class="card-header">Card Header</div>
-          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, non iure! Numquam, magnam. Ea eaque enim aut similique iure soluta minima perferendis magni illum maiores aperiam adipisci, quia fugit dolorem!</div>
+        <ul>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+      </sg-example>
+
+      <a href="#ordered-list" class="sg-h3" id="ordered-list"> Ordered List </a>
+      <sg-example>
+        <ol>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ol>
+      </sg-example>
+    </sg-section>
+
+    <!-- ================== Buttons ================== -->
+    <sg-section>
+      <a href="#buttons" class="sg-h1" id="buttons"> Buttons </a>
+      <sg-example>
+        <div style="margin-bottom: 25px;">
+          <a class="button">Default Button</a>
+        </div>
+
+        <div style="margin-bottom: 25px;">
+          <a class="button button--small">Small Button</a>
+        </div>
+
+        <div style="margin-bottom: 25px;">
+          <a class="button button--secondary">Secondary Button</a>
+        </div>
+
+        <div>
+          <button disabled>Disabled Button</button>
+        </div>
+      </sg-example>
+    </sg-section>
+
+    <!-- ================== Messages ================== -->
+    <sg-section>
+      <a href="#messages" class="sg-h1" id="messages"> Messages </a>
+
+      <a href="#success-message" class="sg-h3" id="success-message"> Success </a>
+      <sg-example>
+        <div class="message message--success">
+          A new user has been successfully added.
         </div>
       </sg-example>
 
-      <xmp class="sg-code">
-<div class="card">
-  <div class="card-header">Card Header</div>
-  <div class="card-body">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, non iure! Numquam, magnam. Ea eaque enim aut similique iure soluta minima perferendis magni illum maiores aperiam adipisci, quia fugit dolorem!
-  </div>
-</div>
-      </xmp>
-
-      <sg-code>
-.card {
-  border-radius: 3px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-}
-
-.card-header {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  background: #247BA0;
-  color: white;
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-.card-body {
-  padding: 20px;
-}
-      </sg-code>
-
-      <sg-table>
-        <sg-tr>
-          <sg-th>Attribute</sg-th>
-          <sg-th>Value</sg-th>
-        </sg-tr>
-
-        <sg-tr>
-          <sg-td>
-            <c>title</c>
-          </sg-td>
-          <sg-td>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae unde maiores hic, magni accusamus eum. Veritatis quod amet pariatur labore magnam delectus minima ratione aliquam mollitia quas nemo, repudiandae similique.
-          </sg-td>
-        </sg-tr>
-
-        <sg-tr>
-          <sg-td>
-            <c>content</c>
-          </sg-td>
-          <sg-td>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ducimus ipsam odio at iusto dicta in blanditiis, exercitationem, veniam cupiditate alias optio illo cumque. Natus aliquam, voluptas nemo corporis quia!
-          </sg-td>
-        </sg-tr>
-      </sg-table>
+      <a href="#error-message" class="sg-h3" id="error-message"> Error </a>
+      <sg-example>
+        <div class="message message--error">
+          Error with <strong>1</strong> field. Please correct the issue and try submitting the form again.
+        </div>
+      </sg-example>
 
     </sg-section>
 
+    <!-- ================== Forms ================== -->
+    <sg-section>
+      <a href="#forms" class="sg-h1" id="forms"> Forms </a>
+      <sg-example>
+        <form action="#">
+          <div class="grid">
+            <div class="grid-1of2">
+              <div class="field">
+                <label class="field-label" for="text-input">Text Input*</label>
+                <input class="field-input" id="text-input" type="text" placeholder="Enter text here" required />
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="email-input">Email Input*</label>
+                <input class="field-input" id="email-input" type="email" placeholder="Enter email here" required />
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="textarea">Textarea</label>
+                <textarea class="field-input" id="textarea" >Textarea Value</textarea>
+              </div>
+
+              <div class="field">
+                <input class="field-input" type="checkbox" id="checkbox-input" checked />
+                <label class="field-label" for="checkbox-input">Checkbox</label>
+              </div>
+
+              <div class="field">
+                <input class="field-input" type="radio" id="radio-one" name="radio-group" checked />
+                <label class="field-label" for="radio-one">Radio One</label>
+
+                <input class="field-input" type="radio" id="radio-two" name="radio-group" />
+                <label class="field-label" for="radio-two">Radio Two</label>
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="date-input">Date Input</label>
+                <input class="field-input" id="date-input" type="date" />
+              </div>
+            </div>
+
+            <div class="grid-1of2">
+              <div class="field">
+                <label class="field-label" for="disabled-input">Disabled Input</label>
+                <input class="field-input" id="disabled-input" type="text" value="Disabled Value" disabled />
+              </div>
+
+              <div class="field field--error">
+                <label class="field-label" for="error-input">Error Input*</label>
+                <input class="field-input" id="error-input" type="text" required />
+                <div class="field-error">This field is required</div>
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="password-input">Password Input*</label>
+                <input class="field-input" id="password-input" type="password" value="passpass" required />
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="select-input">Select Field</label>
+                <select class="field-input" id="select-input">
+                  <option value="one">Option One</option>
+                  <option value="two">Option Two</option>
+                  <option value="three">Option Three</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="file-input">File Input</label>
+                <input class="field-input" type="file" />
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="number-input">Number Input</label>
+                <input class="field-input" id="number-input" type="number" />
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="time-input">Time Input</label>
+                <input class="field-input" id="time-input" type="time" />
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
+      </sg-example>
+    </sg-section>
+
+    <!-- ================== Tables ================== -->
+    <sg-section>
+      <a href="#tables" class="sg-h1" id="tables"> Tables </a>
+      <sg-example>
+        <table>
+          <thead>
+            <tr>
+              <th>Heading One</th>
+              <th>Heading Two</th>
+              <th>Heading Three</th>
+              <th>Heading Four</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Row One</td>
+              <td>Row One</td>
+              <td>Row One</td>
+              <td>Row One</td>
+            </tr>
+            <tr>
+              <td>Row Two</td>
+              <td>Row Two</td>
+              <td>Row Two</td>
+              <td>Row Two</td>
+            </tr>
+            <tr>
+              <td>Row Three</td>
+              <td>Row Three</td>
+              <td>Row Three</td>
+              <td>Row Three</td>
+            </tr>
+            <tr>
+              <td>Row Four</td>
+              <td>Row Four</td>
+              <td>Row Four</td>
+              <td>Row Four</td>
+            </tr>
+          </tbody>
+        </table>
+      </sg-example>
+
+    </sg-section>
+
+    <!-- If you're using Typekit this is where your script should go. Log into Typekit, setup up a new project, and replace the script tags below with the code that Typekit provides. -->
+    <script src="https://use.typekit.net/pwl4pse.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- This script will automatically create the styleguide navigation -->
+    <script src="project/nav.js" type="text/javascript"></script>
   </body>
 </html>

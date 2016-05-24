@@ -1,0 +1,451 @@
+/* ================== Typography ================== */
+/* Google fonts import - see google.com/fonts for more info */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+body {
+  /* The default typeface. A sans-serif (likely Arial) will be used if Open Sans cannot load for some reason */
+  font-family: 'Open Sans', sans-serif;
+
+  /* The default font size. 1px roughly equals 1pt though this is not always exact and may require a little finessing. */
+  font-size: 16px;
+}
+
+/* By default all headings have some spacing (margin) applied above and below. As a rule of thumb, overall spacing in CSS is easier to maintain when it is always applied either above OR below (but not both). This rule simply ensures that no headings have any space above them. */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 22px;
+
+  /* Apply all caps to h1 */
+  text-transform: uppercase;
+
+  /* This typeface is loaded in via Typekit - see the script tags near the bottom of index.html for more info. */
+  font-family: "essonnes-display", serif;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 19px;
+  margin-bottom: 19px;
+}
+
+h4 {
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+h5 {
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+
+h6 {
+  font-size: 11px;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+blockquote {
+  /* Add 36px of leading */
+  line-height: 36px;
+
+  /* Add a 5px wide grey vertical bar along the left side of the blockquote */
+  border-left: 5px solid #EAEAEA;
+
+  /* 16px of spacing above and below the blockquote, no spacing to the left or right */
+  margin: 16px 0;
+
+  /* 50px of space on the left between the text and the vertical bar */
+  padding-left: 50px;
+}
+
+/* Style the open and closing quotation marks around the blockquote */
+blockquote:before, blockquote:after {
+  color: #C3C3C3;
+  transform: scale(1.8);
+  display: inline-block;
+  padding: 0 6px;
+}
+
+blockquote:before {
+  content: open-quote;
+}
+
+blockquote:after {
+  content: close-quote;
+}
+
+/* ================== Lists ================== */
+
+/* Shared (unordered and ordered) list formatting */
+ul, ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* Unordered list specific formatting */
+ul li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EAEAEA;
+  padding-left: 15px;
+  position: relative;
+}
+
+ul li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: 8px solid transparent;
+  border-top-width: 6px;
+  border-bottom-width: 6px;
+  margin-top: -11px;
+  border-left-color: #2185C5;
+}
+
+ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+ul li:last-child:before {
+  margin-top: -6px;
+}
+
+/* Ordered list specific formatting */
+
+ol {
+  counter-reset: list-counter;
+}
+
+ol li:before {
+  counter-increment: list-counter;
+  content: counter(list-counter);
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 12px;
+  background: #2185C5;
+  color: white;
+  font-weight: bold;
+  padding: 2px 5px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+/* ================== Buttons ================== */
+
+.button, button, input[type="submit"] {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding: 10px 25px;
+  border: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: all 0.2s ease-in-out;
+  border-radius: 2px;
+  background: #2185C5;
+  color: white;
+}
+
+.button:hover, button:hover, input[type="submit"]:hover {
+  background: #7ECEFD;
+}
+
+.button:focus, button:focus, input[type="submit"]:focus {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  outline: 0;
+}
+
+.button--small {
+  font-size: 12px;
+}
+
+.button--secondary {
+  background: #C3C3C3;
+  color: white;
+}
+
+.button--secondary:hover {
+  background: #9A9A9A;
+}
+
+.button--disabled, button:disabled, input[type="submit"]:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/* ================== Messages ================== */
+
+.message {
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.message--success {
+  background: #97C475;
+  color: white;
+}
+
+.message--error {
+  background: #D33535;
+  color: white;
+}
+
+/* ================== Forms ================== */
+
+/* We will refer to each combination of label and input as a "field". The "field" class will be applied to a div that will wrap the associated label and input. */
+.field {
+  /* Add 20px of spacing below each form field */
+  margin-bottom: 20px;
+}
+
+.field-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+
+  /* Ensure the label appears above the input */
+  display: block;
+}
+
+.field-input {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 2px;
+  display: block;
+  width: 100%;
+  background: white;
+
+  /* The body typeface does not cascade down to form inputs. Instead you need to re-apply the typeface to the inputs directly. */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Style the placeholder text for all browsers. */
+::-webkit-input-placeholder {
+   color: #C3C3C3;
+}
+
+:-moz-placeholder {
+   color: #C3C3C3;
+}
+
+::-moz-placeholder {
+   color: #C3C3C3;
+}
+
+:-ms-input-placeholder {
+   color: #C3C3C3;
+}
+
+.field-input:focus {
+  border-color: #9A9A9A;
+
+  /* Apply a subtle drop-shadow when the field has focus */
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+
+  /* Prevent the default blue glow effect when field has focus */
+  outline: 0;
+}
+
+select.field-input {
+  /* Apply custom caret icon */
+  background-image: url('caret.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+
+  /* Ensure text does not appear over the caret */
+  padding-right: 30px;
+
+  /* Prevent default select element formatting */
+  -webkit-appearance: none;
+}
+
+textarea.field-input {
+  min-height: 150px;
+}
+
+.field-input:disabled {
+  background: #EAEAEA;
+
+  /* Apply special cursor formatting when the user hovers over a disabled input field */
+  cursor: not-allowed;
+}
+
+.field-input[type="checkbox"],
+.field-input[type="radio"] {
+  /* Hides the actual checkbox and radio controls from view as you're not able to style them directly. Note: using `display:none` here would prevent these controls from being keyboard accessible so they're instead positioned out of view. */
+  position: fixed;
+  left: -9999px;
+  top: -9999px;
+}
+
+.field-input[type="checkbox"] + label,
+.field-input[type="radio"] + label {
+  cursor: pointer;
+
+  /* This is needed to correctly position our styled checkbox/radio controls */
+  position: relative;
+
+  /* This is the space where our new checkbox/radio controls are going to sit. */
+  padding-left: 30px;
+}
+
+/* Shared checkbox and radio input formatting */
+.field-input[type="checkbox"] + label,
+.field-input[type="radio"] + label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.field-input[type="checkbox"] + label:before,
+.field-input[type="checkbox"] + label:after,
+.field-input[type="radio"] + label:before,
+.field-input[type="radio"] + label:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: 0;
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #EAEAEA;
+}
+
+.field-input[type="checkbox"]:focus + label:before,
+.field-input[type="radio"]:focus + label:before {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Checkbox specific formatting */
+.field-input[type="checkbox"] + label:after {
+  background-image: url('checkmark.svg');
+  background-repeat: no-repeat;
+  opacity: 0;
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  margin-top: -8px;
+  border: 0;
+}
+
+.field-input[type="checkbox"]:checked + label:before {
+  border: 10px solid #7ECEFD;
+}
+
+.field-input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+/* Radio input specific formatting */
+.field-input[type="radio"] + label:before,
+.field-input[type="radio"] + label:after {
+  border-radius: 50%;
+}
+
+.field-input[type="radio"]:checked + label:after {
+  border: 7px solid #7ECEFD;
+}
+
+/* Ensure error messages are only visible when appropriate. */
+.field-error {
+  display: none;
+}
+
+.field--error .field-input {
+  border-color: #D33535;
+}
+
+.field--error .field-error {
+  display: block;
+  color: #D33535;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* ================== Tables ================== */
+
+table {
+  width: 100%;
+
+  /* Ensure there is no unecessary spacing between table cells */
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td, th {
+  text-align: left;
+  vertical-align: top;
+  padding: 15px;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+/* Apply a unique background colour to every other row */
+tr:nth-child(2n) td {
+  background: #F6F6F6;
+}
+
+td {
+  transition: background 0.1s ease-in-out;
+  font-size: 14px;
+}
+
+/* Highlight rows on hover */
+tr:hover td {
+  background: #D4EFFF;
+}
+
+/* ================== Grid ================== */
+
+/* A more robust CSS grid will be used in the actual production build, this is just here to help with laying out some of the styleguide sections. */
+.grid {
+  font-size: 0;
+  margin-left: -25px;
+}
+
+.grid > * {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
+  padding-left: 25px;
+}
+
+.grid-1of2 {
+  width: 50%;
+}
+
+/* ================== Box-Sizing Fix ================== */
+/* This ensures that width and height values behave in a more sensible manner. You can learn more about this here: https://css-tricks.com/box-sizing/ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}

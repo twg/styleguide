@@ -1,6 +1,6 @@
 {
   "name": "twg-styleguide",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A platform agnostic styleguide theme",
   "main": "dist/style.css",
   "author": "Mark Appleby",

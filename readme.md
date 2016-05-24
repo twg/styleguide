@@ -84,44 +84,46 @@ In general, TWG Styleguide names are identical to existing HTML element names bu
 If you would like to dynamically create the styleguide navigation you can implement the follow JavaScript into your project:
 
 ```
-var nav, target
-nav = document.querySelectorAll('sg-nav')[0];
+(function () {
+  var navElement, linkTarget
+  navElement = document.querySelector('sg-nav')
 
-allHeadings(function (heading) {
-  if (heading.primary) createWrapper();
-  var link = createLink(heading);
-  if (target) {
-    target.appendChild(link);
-  } else {
-    nav.appendChild(link);
+  forEachHeading(function (heading) {
+    if (isPrimary(heading)) createNavGroup()
+    var navLink = createNavLink(heading)
+    var target = linkTarget || navElement
+    target.appendChild(navLink)
+  })
+
+  function isPrimary (heading) {
+    return heading.className.indexOf('sg-h1') > -1
   }
-})
 
-function allHeadings (cb) {
-  var headings = document.querySelectorAll('.sg-h1, .sg-h2');
-  for(var index = 0; index < headings.length; index++) {
-    var heading = headings[index];
-    if (needsWrapper(heading)) heading.primary = true;
-    cb(heading);
+  function createNavGroup () {
+    var navGroup = document.createElement('div')
+    navElement.appendChild(navGroup)
+    linkTarget = navGroup
   }
-}
 
-function createLink (heading) {
-  var link = document.createElement('a');
-  link.text = heading.text
-  link.href = heading.hash
-  return link
-}
+  function createNavLink (heading) {
+    var link = document.createElement('a')
+    link.text = heading.text
+    link.href = heading.hash
+    return link
+  }
 
-function needsWrapper (heading) {
-  return heading.className.indexOf('sg-h1') > -1;
-}
+  function forEachHeading (callback) {
+    Array.prototype.slice.call(
+      document.querySelectorAll(sgHeadingsSelector())
+    ).forEach(callback)
+  }
 
-function createWrapper () {
-  var div = document.createElement('div');
-  nav.appendChild(div);
-  target = div
-}
+  function sgHeadingsSelector () {
+    return [1, 2, 3, 4, 5, 6].map(function (headingNumber) {
+      return '.sg-h' + headingNumber
+    }).join(', ')
+  }
+})()
 ```
 
 ##Contributing to TWG Styleguide
