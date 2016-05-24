@@ -136,21 +136,33 @@ ul li:last-child:before {
 /* Ordered list specific formatting */
 
 ol {
+  /* Implement a custom counter since the ability to style the default counter is limited */
   counter-reset: list-counter;
 }
 
 ol li:before {
-  counter-increment: list-counter;
-  content: counter(list-counter);
   display: inline-block;
   margin-right: 8px;
   font-size: 12px;
   background: #2185C5;
-  color: white;
-  font-weight: bold;
-  padding: 2px 5px;
-  vertical-align: middle;
-  border-radius: 4px;
+  color: #D7E9F5;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  padding: 0 5px;
+
+  /* Ensure the number sits within a circle */
+  border-radius: 50%;
+
+  /* Apply padding top to visually center the number in the circle */
+  padding-top: 1px;
+
+  /* Apply a y-axis offset to visually center the number with it's text */
+  transform: translateY(-2px);
+
+  /* Auto-increment the counter */
+  counter-increment: list-counter;
+  content: counter(list-counter);
 }
 
 /* ================== Buttons ================== */
