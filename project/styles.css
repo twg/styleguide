@@ -392,6 +392,16 @@ textarea.field-input {
 
 /* ================== Tables ================== */
 
+.table-wrapper {
+  max-width: 100%;
+
+  /* Ensure the table is now wider than its container. If it is wider, allow the user to scroll left and right */
+  overflow: auto;
+
+  /* Ensure the left/right scrolling feels smooth on mobile devices */
+  -webkit-overflow-scrolling: touch;
+}
+
 table {
   width: 100%;
 
@@ -442,6 +452,12 @@ tr:hover td {
 
 .grid-1of2 {
   width: 50%;
+}
+
+@media (max-width: 620px) {
+  .grid-1of2 {
+    width: 100%;
+  }
 }
 
 /* ================== Box-Sizing Fix ================== */
