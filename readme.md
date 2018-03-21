@@ -1,20 +1,20 @@
-#TWG Styleguide
+# TWG Styleguide
 
 Just show me [an example](http://twg.github.io/styleguide/)!
 
-##What is a styleguide?
+## What is a styleguide?
 
 Front-end frameworks like [Bootstrap](http://getbootstrap.com/) and [Foundation](http://foundation.zurb.com/) are awesome. The most awesome feature of these frameworks is not their plethora of shiny components but instead their thorough documentation. Having extensive front-end documentation helps prevent developers from writing redundant code, makes it easier to on-board new developers to a project, and ensures better communication between front-end and back-end developers.
 
 A styleguide is a page or series of pages that house project documentation. For example, [Mailchimp](http://ux.mailchimp.com/patterns/), [Lonely Planet](http://rizzo.lonelyplanet.com/styleguide/design-elements/colours), and [SalesForce](https://www.lightningdesignsystem.com/) all have thorough and useful styleguides publicly available.
 
-##What is TWG Styleguide
+## What is TWG Styleguide
 
 TWG Styleguide is a single CSS file that contains a generic and reusable styleguide theme. Since TWG Styleguide is simply a CSS file it makes no assumptions about your project's tech-stack, this means that you should easily be able to integrate the TWG Styleguide into any project. You can see an [example implementation](http://twg.github.io/styleguide/) of TWG Styleguide here.
 
-##Installation
+## Installation
 
-###Method One: Quick & Dirty
+### Method One: Quick & Dirty
 
 1. Create a new page for your styleguide (the specific method for creating a new page will vary by project).
 1. Add `<link rel="stylesheet" href="http://twg.github.io/styleguide/dist/styleguide.css">` to the top of your new page.
@@ -23,7 +23,7 @@ TWG Styleguide is a single CSS file that contains a generic and reusable stylegu
 
 Note - the concern with this method is one: GitHub Pages isn't really meant to act as a CDN so the repercussions of using it as such are unclear and two: this file is liable to change at any point in the future (as TWG Styleguide is improved) thus, your styleguide may potentially look broken in the future.
 
-###Method Two: Traditional
+### Method Two: Traditional
 
 1. Run `npm install twg-styleguide --save`
 1. Ensure `styleguide.css` is available to your project. For example, you might need to create a gulp task to copy `node_modules/twg-styleguide/dist/styleguide.css` into your project's build directory.
@@ -33,13 +33,13 @@ Note - the concern with this method is one: GitHub Pages isn't really meant to a
 1. You may need to manually hide certain elements on the styleguide page. For instance, if your site has a fixed navigation, you may need/want to hide that on the styleguide page.
 1. Follow the Custom Elements documentation below to implement the custom TWG Styleguide elements.
 
-###Integrating with a Front-end Application Framework (Angular, React, Ember)
+### Integrating with a Front-end Application Framework (Angular, React, Ember)
 
 If you're integrating TWG Styleguide with a front-end application framework, you may run into an issue with the in-page anchor links in the nav not working as expected.
 
 This is caused by the fact that many SPAs (singe page applications) already use a hash to manage the routing (for example `http://example.com/#/about`). So when you try to use an in-page anchor with TWG Styleguide the URL ends up looking something like `http://example.com/#/styleguide#headings`. Since it contains two `#`'s it is invalid and may result in unexpected behavior. There are various ways to fix this depending on which front-end application framework your project is using. For instance, if your project is using AngularJS, see this tutorial on [Pretty URLs](https://scotch.io/quick-tips/pretty-urls-in-angularjs-removing-the-hashtag) to resolve the issue.
 
-##Custom Elements & Classes
+## Custom Elements & Classes
 
 Since the `styleguide.css` file will sit alongside any project specific CSS files you have, TWG Styleguide has to go out of its way to ensure that there are not going to be naming conflicts between the two. We do not want your project styles to interfere with the styleguide styles and we do not want the styleguide styles to interfere with your project styles.
 
@@ -79,7 +79,7 @@ In general, TWG Styleguide names are identical to existing HTML element names bu
 
 - `.sg-code`: To share blocks of **HTML code** use `<xmp class="sg-code">...</xmp>` (though be aware that the `<xmp>` element [is deprecated](https://developer.mozilla.org/en/docs/Web/HTML/Element/xmp)). Note - if you're sharing non-HTML code use the `<sg-code>` element instead (see above).
 
-##Dynamic Navigation
+## Dynamic Navigation
 
 If you would like to dynamically create the styleguide navigation you can implement the follow JavaScript into your project:
 
@@ -126,7 +126,7 @@ If you would like to dynamically create the styleguide navigation you can implem
 })()
 ```
 
-##Contributing to TWG Styleguide
+## Contributing to TWG Styleguide
 
 If you would like to contribute to the development of the TWG Styleguide itself, please follow these steps:
 
